@@ -1,0 +1,3349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admission | Lakhi Ram Memorial Public Sec. School</title>
+
+    <link rel="stylesheet" href="admission.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<style>
+    /* =====================================================
+   LAKHI RAM MEMORIAL PUBLIC SEC. SCHOOL
+   ADMISSION PAGE CSS
+===================================================== */
+
+:root {
+    --blue: #0756b8;
+    --dark-blue: #063b7a;
+    --light-blue: #eef6ff;
+    --lighter-blue: #f7fbff;
+    --text: #102a43;
+    --gray: #687b8f;
+    --white: #ffffff;
+    --border: #dceafa;
+    --green: #1fa855;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   SOCIAL BAR
+===================================================== */
+
+.social-bar {
+    width: 100%;
+    min-height: 40px;
+
+    background: var(--dark-blue);
+    color: white;
+}
+
+.social-container {
+    width: min(1200px, 92%);
+    min-height: 40px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.social-left,
+.social-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-left {
+    gap: 10px;
+}
+
+.social-left span {
+    color: #dcecff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.social-left a {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.social-left a:hover {
+    background: rgba(255,255,255,.15);
+    transform: translateY(-2px);
+}
+
+.social-right {
+    gap: 20px;
+}
+
+.social-right a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: white;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.social-right a:hover {
+    color: #dcecff;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    background: var(--blue);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow:
+        0 5px 18px rgba(0,50,100,0.12);
+}
+
+.nav-container {
+    width: min(1200px, 92%);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+
+    min-width: 300px;
+}
+
+.logo-space {
+    width: 75px;
+    height: 55px;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px dashed rgba(255,255,255,0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+}
+
+.logo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.school-name h2 {
+    color: white;
+
+    font-size: 19px;
+
+    line-height: 1.2;
+}
+
+.school-name span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #dcecff;
+
+    font-size: 11px;
+
+    letter-spacing: .7px;
+}
+
+
+/* NAV */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+}
+
+.nav-links a {
+    padding: 10px 12px;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: .3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255,255,255,0.17);
+}
+
+.nav-links .admission-btn {
+    background: white;
+
+    color: var(--blue);
+
+    margin-left: 5px;
+
+    font-weight: 800;
+}
+
+.nav-links .admission-btn:hover {
+    background: #eaf4ff;
+}
+
+
+/* MOBILE MENU */
+
+.menu-btn {
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: var(--blue);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MARQUEE
+===================================================== */
+
+.school-marquee {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: var(--light-blue);
+
+    border-bottom: 1px solid #d7e8fa;
+}
+
+.marquee-content {
+    width: max-content;
+
+    display: flex;
+
+    gap: 55px;
+
+    padding: 11px 0;
+
+    animation: marqueeMove 20s linear infinite;
+}
+
+.marquee-content span {
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+}
+
+@keyframes marqueeMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =====================================================
+   ADMISSION HERO
+===================================================== */
+
+.admission-hero {
+    min-height: 420px;
+
+    padding: 75px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f1f8ff,
+            #ffffff 55%,
+            #edf6ff
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.admission-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(7,86,184,0.08);
+
+    top: -240px;
+    right: -120px;
+}
+
+.admission-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(7,86,184,0.07);
+
+    bottom: -220px;
+    left: -120px;
+}
+
+.hero-content {
+    width: min(800px, 92%);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-content > span {
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+.hero-content h1 {
+    color: var(--text);
+
+    font-size: clamp(42px, 6vw, 66px);
+
+    line-height: 1.07;
+
+    margin: 12px 0 18px;
+}
+
+.hero-content h1 strong {
+    display: block;
+
+    color: var(--blue);
+}
+
+.hero-content p {
+    max-width: 690px;
+
+    margin: auto;
+
+    color: var(--gray);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   ADMISSION SECTION
+===================================================== */
+
+.admission-section {
+    padding: 95px 20px;
+
+    background: #ffffff;
+}
+
+
+/* SECTION HEADING */
+
+.section-heading {
+    width: min(800px, 92%);
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: var(--text);
+
+    font-size: clamp(34px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    margin: 10px 0 13px;
+}
+
+.section-heading h2 strong {
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* MAIN CONTAINER */
+
+.admission-container {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.75fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+#admissionForm {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(10,50,100,0.07);
+
+    overflow: hidden;
+}
+
+
+/* FORM SECTION */
+
+.form-section {
+    padding: 32px;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+
+/* SECTION TITLE */
+
+.form-section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 26px;
+}
+
+.form-section-title .number {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.form-section-title h3 {
+    color: var(--text);
+
+    font-size: 19px;
+}
+
+.form-section-title span {
+    display: block;
+
+    color: #8392a3;
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 17px;
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #344b60;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background: #fbfdff;
+
+    border: 1px solid #d8e3ee;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    transition: .3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa8b7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(7,86,184,0.08);
+}
+
+
+/* =====================================================
+   DECLARATION
+===================================================== */
+
+.declaration {
+    margin: 0 32px 20px;
+
+    padding: 15px;
+
+    border: 1px solid #dceafa;
+
+    background: var(--light-blue);
+
+    border-radius: 8px;
+}
+
+.declaration label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: #536b80;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.declaration input {
+    margin-top: 3px;
+
+    accent-color: var(--blue);
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.submit-btn {
+    width: calc(100% - 64px);
+
+    margin: 0 32px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--dark-blue);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(7,86,184,.18);
+}
+
+.submit-btn i {
+    margin-right: 8px;
+
+    font-size: 17px;
+}
+
+
+/* NOTE */
+
+.form-note {
+    padding: 15px 32px 28px;
+
+    text-align: center;
+
+    color: #8997a6;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+.form-note i {
+    color: var(--blue);
+
+    margin-right: 4px;
+}
+
+
+/* =====================================================
+   RIGHT INFORMATION
+===================================================== */
+
+.admission-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.info-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px rgba(10,50,100,0.05);
+
+    transition: .3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(7,86,184,.09);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--light-blue);
+
+    color: var(--blue);
+
+    font-size: 20px;
+
+    margin-bottom: 16px;
+}
+
+.info-card h3 {
+    color: var(--text);
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-bottom: 10px;
+}
+
+.info-card a {
+    color: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* HIGHLIGHT CARD */
+
+.info-highlight {
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063b7a,
+            #0756b8
+        );
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.info-highlight::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border: 1px solid rgba(255,255,255,.16);
+
+    border-radius: 50%;
+
+    right: -70px;
+    bottom: -80px;
+}
+
+.info-highlight > span {
+    color: #cfe5ff;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+.info-highlight h3 {
+    font-size: 21px;
+
+    margin: 8px 0 2px;
+}
+
+.info-highlight p {
+    color: #dcecff;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   BOTTOM CTA
+===================================================== */
+
+.admission-bottom {
+    width: min(1200px, 92%);
+
+    margin: 0 auto 80px;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    background: var(--light-blue);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.admission-bottom > div {
+    max-width: 700px;
+}
+
+.admission-bottom span {
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.admission-bottom h2 {
+    color: var(--text);
+
+    font-size: 35px;
+
+    line-height: 1.15;
+
+    margin: 8px 0;
+}
+
+.admission-bottom h2 strong {
+    color: var(--blue);
+}
+
+.admission-bottom p {
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+.admission-bottom > a {
+    flex-shrink: 0;
+
+    padding: 14px 22px;
+
+    border-radius: 7px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: .3s ease;
+}
+
+.admission-bottom > a:hover {
+    background: var(--dark-blue);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: var(--dark-blue);
+
+    color: white;
+
+    padding-top: 60px;
+}
+
+.footer-container {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding-bottom: 45px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.2fr;
+
+    gap: 50px;
+}
+
+.footer-box h3 {
+    margin-bottom: 16px;
+
+    font-size: 15px;
+}
+
+.footer-box p {
+    color: rgba(255,255,255,.72);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.footer-box a {
+    display: block;
+
+    margin: 9px 0;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 13px;
+
+    transition: .3s ease;
+}
+
+.footer-box a:hover {
+    color: white;
+
+    transform: translateX(3px);
+}
+
+
+/* FOOTER LOGO */
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+.footer-logo-space {
+    width: 65px;
+    height: 48px;
+
+    border: 1px dashed rgba(255,255,255,.6);
+
+    background: rgba(255,255,255,.08);
+}
+
+.footer-logo h3 {
+    margin: 0;
+
+    font-size: 17px;
+}
+
+.footer-logo span {
+    color: #dcecff;
+
+    font-size: 10px;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: rgba(255,255,255,.6);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 24px;
+
+    z-index: 2000;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.2);
+
+    transition: .3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .nav-links a {
+        padding: 9px 8px;
+        font-size: 12px;
+    }
+
+    .logo-area {
+        min-width: 250px;
+    }
+
+    .admission-container {
+        grid-template-columns:
+            minmax(0, 1.4fr)
+            minmax(260px, .8fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    /* SOCIAL */
+
+    .social-container {
+        flex-direction: column;
+
+        padding: 7px 0;
+
+        gap: 6px;
+
+        text-align: center;
+    }
+
+    .social-left {
+        gap: 6px;
+    }
+
+    .social-right {
+        gap: 14px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .logo-area {
+        min-width: 0;
+    }
+
+    .logo-space {
+        width: 60px;
+        height: 47px;
+    }
+
+    .school-name h2 {
+        font-size: 15px;
+    }
+
+    .school-name span {
+        font-size: 9px;
+    }
+
+
+    .menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .nav-links {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 10px 5% 15px;
+
+        background: var(--blue);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 3px;
+
+        box-shadow:
+            0 15px 25px rgba(0,0,0,.15);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 13px;
+
+        text-align: left;
+    }
+
+    .nav-links .admission-btn {
+        margin-left: 0;
+
+        text-align: center;
+    }
+
+
+    /* HERO */
+
+    .admission-hero {
+        min-height: 360px;
+
+        padding: 60px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+
+    /* FORM */
+
+    .admission-section {
+        padding: 70px 15px;
+    }
+
+    .admission-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .form-section {
+        padding: 25px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .declaration {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .submit-btn {
+        width: calc(100% - 40px);
+
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .form-note {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* CTA */
+
+    .admission-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 35px 25px;
+
+        margin-bottom: 60px;
+    }
+
+    .admission-bottom > a {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .social-left span {
+        font-size: 10px;
+    }
+
+    .social-left a {
+        width: 25px;
+        height: 25px;
+    }
+
+    .social-right a {
+        font-size: 10px;
+    }
+
+
+    .logo-space {
+        width: 52px;
+        height: 43px;
+    }
+
+    .school-name h2 {
+        font-size: 13px;
+    }
+
+    .school-name span {
+        font-size: 8px;
+    }
+
+
+    .admission-hero {
+        min-height: 330px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+
+    .form-section-title h3 {
+        font-size: 17px;
+    }
+
+    .form-section-title span {
+        font-size: 10px;
+    }
+
+
+    .info-card {
+        padding: 22px;
+    }
+
+
+    .admission-bottom h2 {
+        font-size: 28px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 18px 0;
+    }
+
+
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 22px;
+    }
+
+}
+</style>
+
+<body>
+
+
+<!-- =====================================================
+     SOCIAL BAR
+===================================================== -->
+
+<div class="social-bar">
+
+    <div class="social-container">
+
+        <div class="social-left">
+        <span>Follow Us</span>
+
+        <a href="https://www.facebook.com/profile.php?id=100043325314059" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/lakhirammemsrsecschool?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@lakhirammemsrsecschool?si=zoe5a7tN0A0ABR8w" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+
+        <div class="social-right">
+
+            <a href="tel:+918950025448">
+                <i class="fas fa-phone"></i>
+                +91 89500 25448
+            </a>
+
+            <a href="mailto:lrmpss2003@gmail.com">
+                <i class="fas fa-envelope"></i>
+                lrmpss2003@gmail.com
+            </a>
+
+            <a href="https://wa.me/918950025448"
+               target="_blank">
+
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo-area">
+
+            <div class="logo-space">
+
+               
+                <img src="logo-removebg-preview.png" alt="School Logo">
+                
+
+            </div>
+
+
+            <div class="school-name">
+
+                <h2>
+                    Lakhi Ram Memorial
+                </h2>
+
+                <span>
+                    Public Sec. School
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="nav-links"
+            id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="principal.html">
+                Principal
+            </a>
+
+            <a href="facilities.html">
+                Facilities
+            </a>
+
+            <a href="results.html">
+                Results
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="admission.html"
+               class="active admission-btn">
+
+                Admission
+
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MARQUEE
+===================================================== -->
+
+<div class="school-marquee">
+
+    <div class="marquee-content">
+
+        <span>A STATE TOPPER SCHOOL</span>
+
+        <span>QUALITY EDUCATION</span>
+
+        <span>DISCIPLINE &amp; VALUES</span>
+
+        <span>BRIGHT FUTURE</span>
+
+        <span>EXCELLENCE</span>
+
+        <span>ADMISSIONS OPEN</span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="admission-hero">
+
+    <div class="hero-content">
+
+        <span>
+            ADMISSIONS OPEN 2026-27
+        </span>
+
+        <h1>
+
+            Start Your Child's
+            <strong>Bright Future</strong>
+
+        </h1>
+
+        <p>
+
+            Fill in the admission form below.
+            After submitting, all entered details
+            will be prepared and sent to our school
+            WhatsApp number.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMISSION FORM SECTION
+===================================================== -->
+
+<section class="admission-section">
+
+
+    <div class="section-heading">
+
+        <span>
+            ADMISSION ENQUIRY
+        </span>
+
+        <h2>
+            Student
+            <strong>Information</strong>
+        </h2>
+
+        <p>
+            Please fill in the information carefully.
+            The submitted details will be sent to the
+            school through WhatsApp.
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         FORM
+    ================================================= -->
+
+    <div class="admission-container">
+
+
+        <form id="admissionForm">
+
+
+            <!-- =========================================
+                 STUDENT DETAILS
+            ========================================== -->
+
+            <div class="form-section">
+
+                <div class="form-section-title">
+
+                    <div class="number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Student Details
+                        </h3>
+
+                        <span>
+                            Basic information about the student
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="studentName">
+                            Student Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter student's full name"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="dob">
+                            Date of Birth *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="gender">
+                            Gender *
+                        </label>
+
+                        <select id="gender" required>
+
+                            <option value="">
+                                Select Gender
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="classApply">
+                            Class Applying For *
+                        </label>
+
+                        <select id="classApply" required>
+
+                            <option value="">
+                                Select Class
+                            </option>
+
+                            <option>
+                                Nursery
+                            </option>
+
+                            <option>
+                                LKG
+                            </option>
+
+                            <option>
+                                UKG
+                            </option>
+
+                            <option>
+                                Class 1
+                            </option>
+
+                            <option>
+                                Class 2
+                            </option>
+
+                            <option>
+                                Class 3
+                            </option>
+
+                            <option>
+                                Class 4
+                            </option>
+
+                            <option>
+                                Class 5
+                            </option>
+
+                            <option>
+                                Class 6
+                            </option>
+
+                            <option>
+                                Class 7
+                            </option>
+
+                            <option>
+                                Class 8
+                            </option>
+
+                            <option>
+                                Class 9
+                            </option>
+
+                            <option>
+                                Class 10
+                            </option>
+
+                            <option>
+                                Class 11
+                            </option>
+
+                            <option>
+                                Class 12
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="previousSchool">
+                            Previous School
+                        </label>
+
+                        <input
+                            type="text"
+                            id="previousSchool"
+                            placeholder="Previous school name">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="previousClass">
+                            Previous Class
+                        </label>
+
+                        <input
+                            type="text"
+                            id="previousClass"
+                            placeholder="Example: Class 5">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 PARENT DETAILS
+            ========================================== -->
+
+            <div class="form-section">
+
+                <div class="form-section-title">
+
+                    <div class="number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Parent / Guardian Details
+                        </h3>
+
+                        <span>
+                            Contact information
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="fatherName">
+                            Father's Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fatherName"
+                            placeholder="Enter father's name"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="motherName">
+                            Mother's Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="motherName"
+                            placeholder="Enter mother's name">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="parentPhone">
+                            Parent Phone Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="parentPhone"
+                            placeholder="10 digit mobile number"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="alternatePhone">
+                            Alternate Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="alternatePhone"
+                            placeholder="Optional number"
+                            maxlength="10">
+
+                    </div>
+
+
+
+                    <div class="form-group full">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter parent email">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 ADDRESS
+            ========================================== -->
+
+            <div class="form-section">
+
+                <div class="form-section-title">
+
+                    <div class="number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Address Details
+                        </h3>
+
+                        <span>
+                            Residential information
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group full">
+
+                        <label for="address">
+                            Full Address *
+                        </label>
+
+                        <textarea
+                            id="address"
+                            rows="4"
+                            placeholder="Enter complete address"
+                            required></textarea>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="village">
+                            Village / Area
+                        </label>
+
+                        <input
+                            type="text"
+                            id="village"
+                            placeholder="Village / Area">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="district">
+                            District
+                        </label>
+
+                        <input
+                            type="text"
+                            id="district"
+                            placeholder="District">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="state">
+                            State
+                        </label>
+
+                        <input
+                            type="text"
+                            id="state"
+                            value="Haryana">
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="pincode">
+                            PIN Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pincode"
+                            maxlength="6"
+                            placeholder="PIN Code">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 ADDITIONAL INFORMATION
+            ========================================== -->
+
+            <div class="form-section">
+
+                <div class="form-section-title">
+
+                    <div class="number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Additional Information
+                        </h3>
+
+                        <span>
+                            Tell us more about your enquiry
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="transport">
+                            Transport Required?
+                        </label>
+
+                        <select id="transport">
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="Yes">
+                                Yes
+                            </option>
+
+                            <option value="No">
+                                No
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="source">
+                            How Did You Hear About Us?
+                        </label>
+
+                        <select id="source">
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option>
+                                Google
+                            </option>
+
+                            <option>
+                                Facebook
+                            </option>
+
+                            <option>
+                                Instagram
+                            </option>
+
+                            <option>
+                                YouTube
+                            </option>
+
+                            <option>
+                                Friend / Relative
+                            </option>
+
+                            <option>
+                                School Visit
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group full">
+
+                        <label for="message">
+                            Additional Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="5"
+                            placeholder="Write any additional information or question..."></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 DECLARATION
+            ========================================== -->
+
+            <div class="declaration">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="declaration"
+                        required>
+
+                    <span>
+
+                        I confirm that the information provided
+                        above is correct to the best of my knowledge.
+
+                    </span>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Submit Admission Enquiry
+
+            </button>
+
+
+            <p class="form-note">
+
+                <i class="fas fa-lock"></i>
+
+                Your entered details will be prepared as an
+                admission enquiry and opened in WhatsApp for
+                sending to the school.
+
+            </p>
+
+
+        </form>
+
+
+        <!-- =================================================
+             RIGHT INFORMATION
+        ================================================= -->
+
+        <aside class="admission-info">
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <h3>
+                    Admission Open
+                </h3>
+
+                <p>
+                    Admissions are currently open.
+                    Submit your enquiry to get more details
+                    from the school.
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    <i class="fas fa-file-lines"></i>
+                </div>
+
+                <h3>
+                    Keep Documents Ready
+                </h3>
+
+                <p>
+                    Keep the student's academic and identity
+                    documents ready for the admission process.
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+
+                <h3>
+                    Need Help?
+                </h3>
+
+                <p>
+                    Call or WhatsApp the school for admission
+                    related information.
+                </p>
+
+                <a href="tel:+918950025448">
+                    +91 89500 25448
+                </a>
+
+            </div>
+
+
+
+            <div class="info-highlight">
+
+                <span>
+                    SCHOOL
+                </span>
+
+                <h3>
+                    Lakhi Ram Memorial
+                </h3>
+
+                <p>
+                    Public Sec. School
+                </p>
+
+                <p>
+                    Halalpur, Sonipat, Haryana
+                </p>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMISSION CTA
+===================================================== -->
+
+<section class="admission-bottom">
+
+    <div>
+
+        <span>
+            NEED MORE INFORMATION?
+        </span>
+
+        <h2>
+            Talk To Our
+            <strong>School Team</strong>
+        </h2>
+
+        <p>
+            Our team can help you with classes,
+            admission process, fees and other details.
+        </p>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/918950025448"
+        target="_blank">
+
+        <i class="fab fa-whatsapp"></i>
+
+        WhatsApp School
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-box">
+
+            <div class="footer-logo">
+
+               
+
+                <div>
+
+                    <h2>
+                        Lakhi Ram Memorial
+                    </h2>
+
+                    <span>
+                        Public Sec. School
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Providing quality education with discipline,
+                values and opportunities for every student.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="principal.html">
+                Principal
+            </a>
+
+            <a href="facility.html">
+                Facilities
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-box">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Halalpur, Sonipat, Haryana
+            </p>
+
+            <a href="tel:+918950025448">
+                ☎ +91 89500 25448
+            </a>
+
+            <a href="mailto:lrmpss2003@gmail.com">
+                ✉ lrmpss2003@gmail.com
+            </a>
+
+            <a
+                href="https://wa.me/918950025448"
+                target="_blank">
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lakhi Ram Memorial Public Sec. School.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Made by <strong>Parteek Tushir</strong>
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/918950025448"
+    target="_blank"
+    class="floating-whatsapp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<script>
+
+// =====================================================
+// LAKHI RAM MEMORIAL PUBLIC SEC. SCHOOL
+// ADMISSION PAGE JAVASCRIPT
+// =====================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // =================================================
+    // MOBILE NAVBAR
+    // =================================================
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuBtn && navLinks) {
+
+        menuBtn.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            navLinks.classList.toggle("show");
+
+            const icon = menuBtn.querySelector("i");
+
+            if (icon) {
+
+                if (navLinks.classList.contains("show")) {
+
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+
+                } else {
+
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+
+                }
+
+            }
+
+        });
+
+
+        // Menu link click ke baad close
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("show");
+
+                const icon = menuBtn.querySelector("i");
+
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+
+            });
+
+        });
+
+
+        // Bahar click karne par menu close
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !navLinks.contains(event.target) &&
+                !menuBtn.contains(event.target)
+            ) {
+
+                navLinks.classList.remove("show");
+
+                const icon = menuBtn.querySelector("i");
+
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+
+            }
+
+        });
+
+    }
+
+
+    // =================================================
+    // ADMISSION FORM
+    // =================================================
+
+    const admissionForm =
+        document.getElementById("admissionForm");
+
+
+    if (!admissionForm) {
+        return;
+    }
+
+
+    admissionForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        // =============================================
+        // GET FORM VALUES
+        // =============================================
+
+        const studentName =
+            document.getElementById("studentName").value.trim();
+
+        const dob =
+            document.getElementById("dob").value;
+
+        const gender =
+            document.getElementById("gender").value;
+
+        const classApply =
+            document.getElementById("classApply").value;
+
+        const previousSchool =
+            document.getElementById("previousSchool").value.trim();
+
+        const previousClass =
+            document.getElementById("previousClass").value.trim();
+
+
+        const fatherName =
+            document.getElementById("fatherName").value.trim();
+
+        const motherName =
+            document.getElementById("motherName").value.trim();
+
+        const parentPhone =
+            document.getElementById("parentPhone").value.trim();
+
+        const alternatePhone =
+            document.getElementById("alternatePhone").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+
+        const address =
+            document.getElementById("address").value.trim();
+
+        const village =
+            document.getElementById("village").value.trim();
+
+        const district =
+            document.getElementById("district").value.trim();
+
+        const state =
+            document.getElementById("state").value.trim();
+
+        const pincode =
+            document.getElementById("pincode").value.trim();
+
+
+        const transport =
+            document.getElementById("transport").value;
+
+        const source =
+            document.getElementById("source").value;
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+        const declaration =
+            document.getElementById("declaration").checked;
+
+
+        // =============================================
+        // REQUIRED FIELD VALIDATION
+        // =============================================
+
+        if (!studentName) {
+
+            alert(
+                "Please enter student's full name."
+            );
+
+            document
+                .getElementById("studentName")
+                .focus();
+
+            return;
+        }
+
+
+        if (!dob) {
+
+            alert(
+                "Please select student's date of birth."
+            );
+
+            document
+                .getElementById("dob")
+                .focus();
+
+            return;
+        }
+
+
+        if (!gender) {
+
+            alert(
+                "Please select gender."
+            );
+
+            document
+                .getElementById("gender")
+                .focus();
+
+            return;
+        }
+
+
+        if (!classApply) {
+
+            alert(
+                "Please select the class."
+            );
+
+            document
+                .getElementById("classApply")
+                .focus();
+
+            return;
+        }
+
+
+        if (!fatherName) {
+
+            alert(
+                "Please enter father's name."
+            );
+
+            document
+                .getElementById("fatherName")
+                .focus();
+
+            return;
+        }
+
+
+        if (!parentPhone) {
+
+            alert(
+                "Please enter parent's phone number."
+            );
+
+            document
+                .getElementById("parentPhone")
+                .focus();
+
+            return;
+        }
+
+
+        // =============================================
+        // PHONE VALIDATION
+        // =============================================
+
+        const phonePattern = /^[6-9]\d{9}$/;
+
+        if (!phonePattern.test(parentPhone)) {
+
+            alert(
+                "Please enter a valid 10-digit Indian mobile number."
+            );
+
+            document
+                .getElementById("parentPhone")
+                .focus();
+
+            return;
+        }
+
+
+        if (
+            alternatePhone &&
+            !phonePattern.test(alternatePhone)
+        ) {
+
+            alert(
+                "Please enter a valid alternate phone number."
+            );
+
+            document
+                .getElementById("alternatePhone")
+                .focus();
+
+            return;
+        }
+
+
+        // =============================================
+        // PINCODE VALIDATION
+        // =============================================
+
+        if (
+            pincode &&
+            !/^\d{6}$/.test(pincode)
+        ) {
+
+            alert(
+                "Please enter a valid 6-digit PIN code."
+            );
+
+            document
+                .getElementById("pincode")
+                .focus();
+
+            return;
+        }
+
+
+        // =============================================
+        // EMAIL VALIDATION
+        // =============================================
+
+        if (email) {
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+
+                alert(
+                    "Please enter a valid email address."
+                );
+
+                document
+                    .getElementById("email")
+                    .focus();
+
+                return;
+            }
+
+        }
+
+
+        // =============================================
+        // DECLARATION
+        // =============================================
+
+        if (!declaration) {
+
+            alert(
+                "Please confirm that the information provided is correct."
+            );
+
+            return;
+        }
+
+
+        // =============================================
+        // FORMAT DOB
+        // =============================================
+
+        let formattedDOB = "Not provided";
+
+        if (dob) {
+
+            const dobDate =
+                new Date(dob + "T00:00:00");
+
+            formattedDOB =
+                dobDate.toLocaleDateString(
+                    "en-IN",
+                    {
+                        day: "2-digit",
+                        month: "2-digit",
+                        year: "numeric"
+                    }
+                );
+
+        }
+
+
+        // =============================================
+        // WHATSAPP MESSAGE
+        // =============================================
+
+        const whatsappMessage = `
+*LAKHI RAM MEMORIAL PUBLIC SEC. SCHOOL*
+
+*ADMISSION ENQUIRY / प्रवेश पूछताछ*
+
+━━━━━━━━━━━━━━━━━━━━
+
+*STUDENT DETAILS / छात्र विवरण*
+
+Student Name:
+${studentName}
+
+Date of Birth:
+${formattedDOB}
+
+Gender:
+${gender}
+
+Class Applying For:
+${classApply}
+
+Previous School:
+${previousSchool || "Not provided"}
+
+Previous Class:
+${previousClass || "Not provided"}
+
+
+*PARENT / GUARDIAN DETAILS*
+*माता-पिता / अभिभावक विवरण*
+
+Father's Name:
+${fatherName}
+
+Mother's Name:
+${motherName || "Not provided"}
+
+Parent Phone:
+${parentPhone}
+
+Alternate Phone:
+${alternatePhone || "Not provided"}
+
+Email:
+${email || "Not provided"}
+
+
+*ADDRESS DETAILS / पता विवरण*
+
+Full Address:
+${address}
+
+Village / Area:
+${village || "Not provided"}
+
+District:
+${district || "Not provided"}
+
+State:
+${state || "Haryana"}
+
+PIN Code:
+${pincode || "Not provided"}
+
+
+*ADDITIONAL INFORMATION*
+*अतिरिक्त जानकारी*
+
+Transport Required:
+${transport || "Not selected"}
+
+How Did You Hear About Us:
+${source || "Not selected"}
+
+Additional Message:
+${message || "No additional message"}
+
+
+━━━━━━━━━━━━━━━━━━━━
+
+*Hindi Message:*
+
+नमस्ते सर/मैडम,
+
+मैं अपने बच्चे के admission के बारे में जानकारी प्राप्त करना चाहता/चाहती हूँ। ऊपर दी गई सभी जानकारी admission enquiry के लिए भरी गई है।
+
+कृपया admission process, fees, available classes और required documents की जानकारी साझा करें।
+
+धन्यवाद।
+
+━━━━━━━━━━━━━━━━━━━━
+
+*English Message:*
+
+Hello Sir/Ma'am,
+
+I would like to enquire about admission for my child. I have provided the required information above.
+
+Please share the admission process, fee structure, available classes and required documents.
+
+Thank You.
+`;
+
+
+        // =============================================
+        // WHATSAPP URL
+        // =============================================
+
+        const schoolNumber =
+            "918950025448";
+
+        const whatsappURL =
+            "https://wa.me/" +
+            schoolNumber +
+            "?text=" +
+            encodeURIComponent(
+                whatsappMessage
+            );
+
+
+        // =============================================
+        // BUTTON STATE
+        // =============================================
+
+        const submitButton =
+            admissionForm.querySelector(
+                ".submit-btn"
+            );
+
+
+        if (submitButton) {
+
+            const originalText =
+                submitButton.innerHTML;
+
+            submitButton.innerHTML =
+                '<i class="fab fa-whatsapp"></i> Opening WhatsApp...';
+
+            submitButton.disabled = true;
+
+
+            setTimeout(function () {
+
+                submitButton.innerHTML =
+                    originalText;
+
+                submitButton.disabled = false;
+
+            }, 2500);
+
+        }
+
+
+        // =============================================
+        // OPEN WHATSAPP
+        // =============================================
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    });
+
+
+    // =================================================
+    // PHONE INPUT - ONLY NUMBERS
+    // =================================================
+
+    const phoneInputs =
+        document.querySelectorAll(
+            "#parentPhone, #alternatePhone, #pincode"
+        );
+
+
+    phoneInputs.forEach(function (input) {
+
+        input.addEventListener(
+            "input",
+            function () {
+
+                this.value =
+                    this.value.replace(/\D/g, "");
+
+            }
+        );
+
+    });
+
+
+    // =================================================
+    // STUDENT NAME - CLEAN SPACES
+    // =================================================
+
+    const nameInputs =
+        document.querySelectorAll(
+            "#studentName, #fatherName, #motherName"
+        );
+
+
+    nameInputs.forEach(function (input) {
+
+        input.addEventListener(
+            "blur",
+            function () {
+
+                this.value =
+                    this.value
+                        .replace(/\s+/g, " ")
+                        .trim();
+
+            }
+        );
+
+    });
+
+
+    // =================================================
+    // ESCAPE - CLOSE MOBILE MENU
+    // =================================================
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                if (navLinks) {
+
+                    navLinks.classList.remove(
+                        "show"
+                    );
+
+                }
+
+                if (menuBtn) {
+
+                    const icon =
+                        menuBtn.querySelector("i");
+
+                    if (icon) {
+
+                        icon.classList.remove(
+                            "fa-xmark"
+                        );
+
+                        icon.classList.add(
+                            "fa-bars"
+                        );
+
+                    }
+
+                }
+
+            }
+
+        }
+    );
+
+
+    // =================================================
+    // SCROLL REVEAL
+    // =================================================
+
+    const animatedElements =
+        document.querySelectorAll(
+            ".form-section, .info-card, .info-highlight"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.10
+            }
+        );
+
+
+    animatedElements.forEach(
+        function (element) {
+
+            element.style.opacity = "0";
+
+            element.style.transform =
+                "translateY(18px)";
+
+            element.style.transition =
+                "opacity .6s ease, transform .6s ease";
+
+            observer.observe(element);
+
+        }
+    );
+
+
+    const animationStyle =
+        document.createElement("style");
+
+    animationStyle.innerHTML = `
+
+        .form-section.visible,
+        .info-card.visible,
+        .info-highlight.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: wait;
+        }
+
+    `;
+
+    document.head.appendChild(
+        animationStyle
+    );
+
+});
+
+
+</script>
+
+</body>
+</html>

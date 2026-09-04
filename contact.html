@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Lakhi Ram Memorial Public Sec. School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+<style>
+    /* =====================================================
+   LAKHI RAM MEMORIAL PUBLIC SEC. SCHOOL
+   CONTACT PAGE CSS
+===================================================== */
+
+:root {
+    --blue: #0756b8;
+    --dark-blue: #063b7a;
+    --light-blue: #eef6ff;
+    --lighter-blue: #f7fbff;
+    --text: #102a43;
+    --gray: #687b8f;
+    --white: #ffffff;
+    --border: #dceafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   SOCIAL BAR
+===================================================== */
+
+.social-bar {
+    width: 100%;
+    min-height: 40px;
+    background: var(--dark-blue);
+    color: white;
+}
+
+.social-container {
+    width: min(1200px, 92%);
+    min-height: 40px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.social-left,
+.social-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-left {
+    gap: 12px;
+}
+
+.social-left span {
+    color: #dcecff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.social-left a {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.social-left a:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+
+.social-right {
+    gap: 20px;
+}
+
+.social-right a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: white;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+.social-right a:hover {
+    color: #dcecff;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+
+    background: var(--blue);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 5px 18px rgba(0,50,100,0.12);
+}
+
+.nav-container {
+    width: min(1200px, 92%);
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+
+    min-width: 300px;
+}
+
+.logo-space {
+    width: 75px;
+    height: 55px;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px dashed rgba(255,255,255,0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.logo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.school-name h2 {
+    color: white;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.school-name span {
+    display: block;
+    margin-top: 3px;
+
+    color: #dcecff;
+
+    font-size: 11px;
+
+    letter-spacing: 0.7px;
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 4px;
+}
+
+.nav-links a {
+    position: relative;
+
+    padding: 10px 12px;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255,255,255,0.17);
+}
+
+
+/* ADMISSION BUTTON */
+
+.nav-links .admission-btn {
+    background: white;
+    color: var(--blue);
+
+    margin-left: 5px;
+
+    font-weight: 800;
+}
+
+.nav-links .admission-btn:hover {
+    background: #eaf4ff;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-btn {
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: white;
+    color: var(--blue);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MARQUEE
+===================================================== */
+
+.school-marquee {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: var(--light-blue);
+
+    border-bottom: 1px solid #d7e8fa;
+}
+
+.marquee-content {
+    width: max-content;
+
+    display: flex;
+    gap: 55px;
+
+    padding: 11px 0;
+
+    animation: marqueeMove 20s linear infinite;
+}
+
+.marquee-content span {
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+}
+
+@keyframes marqueeMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =====================================================
+   CONTACT HERO
+===================================================== */
+
+.contact-hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0f7ff 0%,
+            #ffffff 55%,
+            #edf6ff 100%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border: 1px solid rgba(7,86,184,0.08);
+
+    border-radius: 50%;
+
+    top: -200px;
+    right: -80px;
+}
+
+.contact-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(7,86,184,0.07);
+
+    border-radius: 50%;
+
+    bottom: -180px;
+    left: -80px;
+}
+
+.contact-hero-content {
+    max-width: 800px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.contact-hero-content > span {
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+}
+
+.contact-hero-content h1 {
+    color: var(--text);
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.08;
+
+    margin: 13px 0 18px;
+}
+
+.contact-hero-content h1 strong {
+    display: block;
+    color: var(--blue);
+}
+
+.contact-hero-content p {
+    max-width: 680px;
+
+    margin: auto;
+
+    color: var(--gray);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section {
+    padding: 95px 25px;
+
+    background: white;
+}
+
+.section-heading {
+    width: min(780px, 92%);
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: clamp(34px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    margin: 10px 0 13px;
+}
+
+.section-heading h2 strong {
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   CONTACT CARDS
+===================================================== */
+
+.contact-cards {
+    width: min(1150px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.contact-card {
+    min-height: 220px;
+
+    padding: 28px 20px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    transition: 0.35s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #a8c9ec;
+
+    box-shadow:
+        0 18px 40px rgba(7,86,184,0.08);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: var(--light-blue);
+
+    color: var(--blue);
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+.contact-card > span {
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+.contact-card h3 {
+    color: var(--text);
+
+    font-size: 16px;
+
+    word-break: break-word;
+}
+
+.contact-card p {
+    color: var(--gray);
+
+    font-size: 12px;
+
+    margin-top: 6px;
+}
+
+
+/* =====================================================
+   ENQUIRY SECTION
+===================================================== */
+
+.enquiry-section {
+    padding: 95px 25px;
+
+    background: var(--light-blue);
+}
+
+.enquiry-container {
+    width: min(1150px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.enquiry-form {
+    background: white;
+
+    padding: 45px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(7,86,184,0.06);
+}
+
+.form-label {
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.enquiry-form h2 {
+    color: var(--text);
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    margin: 10px 0;
+}
+
+.enquiry-form h2 strong {
+    color: var(--blue);
+}
+
+.enquiry-form > p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+
+/* FORM ROW */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #314b63;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid #d8e3ee;
+
+    background: #fbfdff;
+
+    color: var(--text);
+
+    border-radius: 7px;
+
+    padding: 12px 13px;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px rgba(7,86,184,0.08);
+
+    background: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9aa8b8;
+}
+
+
+/* SEND BUTTON */
+
+.send-btn {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 7px;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.send-btn:hover {
+    background: var(--dark-blue);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(7,86,184,0.18);
+}
+
+.send-btn i {
+    margin-right: 8px;
+
+    color: #c8ffd9;
+}
+
+
+/* =====================================================
+   MAP AREA
+===================================================== */
+
+.map-area {
+    min-height: 100%;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #063b7a,
+            #0756b8
+        );
+
+    box-shadow:
+        0 15px 40px rgba(7,86,184,0.13);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.map-area::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 50%;
+
+    top: -220px;
+    right: -140px;
+}
+
+.map-area::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 50%;
+
+    bottom: -180px;
+    left: -120px;
+}
+
+.map-placeholder {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 35px;
+
+    color: white;
+}
+
+.map-placeholder > i {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.12);
+
+    color: #dcecff;
+
+    font-size: 30px;
+}
+
+.map-placeholder h3 {
+    font-size: 26px;
+
+    margin-bottom: 4px;
+}
+
+.map-placeholder p {
+    color: #dcecff;
+
+    font-size: 14px;
+}
+
+.map-placeholder > span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 13px;
+}
+
+.map-placeholder a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    padding: 12px 18px;
+
+    background: white;
+
+    color: var(--blue);
+
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+.map-placeholder a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HELP SECTION
+===================================================== */
+
+.help-section {
+    padding: 90px 25px;
+
+    background: white;
+}
+
+.help-grid {
+    width: min(1000px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.help-card {
+    padding: 30px 25px;
+
+    text-align: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(7,86,184,0.08);
+}
+
+.help-card > i {
+    font-size: 30px;
+
+    color: var(--blue);
+
+    margin-bottom: 17px;
+}
+
+.help-card h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.help-card p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   ADMISSION CTA
+===================================================== */
+
+.admission-cta {
+    width: min(1150px, 92%);
+
+    margin: 0 auto 80px;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063b7a,
+            #0756b8
+        );
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    box-shadow:
+        0 18px 45px rgba(7,86,184,0.18);
+}
+
+.admission-cta > div {
+    max-width: 700px;
+}
+
+.admission-cta span {
+    color: #cfe5ff;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+.admission-cta h2 {
+    font-size: 35px;
+
+    line-height: 1.15;
+
+    margin: 8px 0;
+}
+
+.admission-cta h2 strong {
+    color: #a9d5ff;
+}
+
+.admission-cta p {
+    color: rgba(255,255,255,0.78);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.admission-cta .admission-btn {
+    flex-shrink: 0;
+
+    padding: 14px 21px;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: var(--blue);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: 0.3s ease;
+}
+
+.admission-cta .admission-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2);
+}
+
+.admission-cta .admission-btn i {
+    color: #1fa855;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: #063b7a;
+
+    color: white;
+
+    padding-top: 60px;
+}
+
+.footer-container {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding-bottom: 45px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.2fr;
+
+    gap: 50px;
+}
+
+.footer-box h3 {
+    margin-bottom: 16px;
+
+    font-size: 15px;
+}
+
+.footer-box p {
+    color: rgba(255,255,255,0.72);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.footer-box a {
+    display: block;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 13px;
+
+    margin: 9px 0;
+
+    transition: 0.3s ease;
+}
+
+.footer-box a:hover {
+    color: white;
+
+    transform: translateX(3px);
+}
+
+
+/* FOOTER LOGO */
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+.footer-logo-space {
+    width: 65px;
+    height: 48px;
+
+    border: 1px dashed rgba(255,255,255,0.6);
+
+    background: rgba(255,255,255,0.08);
+}
+
+.footer-logo h3 {
+    margin: 0;
+
+    font-size: 17px;
+}
+
+.footer-logo span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #dcecff;
+
+    font-size: 10px;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,0.62);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #1fa855;
+
+    color: white;
+
+    font-size: 24px;
+
+    z-index: 2000;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.2);
+
+    transition: 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .nav-links a {
+        padding: 9px 8px;
+        font-size: 12px;
+    }
+
+    .logo-area {
+        min-width: 250px;
+    }
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    /* SOCIAL BAR */
+
+    .social-container {
+        padding: 7px 0;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .social-left {
+        gap: 5px;
+    }
+
+    .social-right {
+        gap: 12px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .logo-area {
+        min-width: 0;
+    }
+
+    .logo-space {
+        width: 60px;
+        height: 47px;
+    }
+
+    .school-name h2 {
+        font-size: 15px;
+    }
+
+    .school-name span {
+        font-size: 9px;
+    }
+
+
+    .menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .nav-links {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 10px 5% 15px;
+
+        background: var(--blue);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 3px;
+
+        box-shadow:
+            0 15px 25px rgba(0,0,0,0.15);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 13px;
+
+        text-align: left;
+    }
+
+    .nav-links .admission-btn {
+        margin-left: 0;
+
+        margin-top: 5px;
+
+        text-align: center;
+    }
+
+
+    /* HERO */
+
+    .contact-hero {
+        min-height: 360px;
+
+        padding: 60px 20px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 43px;
+    }
+
+    .contact-hero-content p {
+        font-size: 14px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section,
+    .help-section {
+        padding: 70px 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+
+    /* ENQUIRY */
+
+    .enquiry-section {
+        padding: 70px 18px;
+    }
+
+    .enquiry-container {
+        grid-template-columns: 1fr;
+    }
+
+    .enquiry-form {
+        padding: 32px 24px;
+    }
+
+    .map-area {
+        min-height: 400px;
+    }
+
+
+    /* HELP */
+
+    .help-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .admission-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 35px 25px;
+
+        margin: 0 18px 60px;
+    }
+
+    .admission-cta .admission-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .social-left span {
+        font-size: 10px;
+    }
+
+    .social-right a {
+        font-size: 10px;
+    }
+
+
+    .logo-space {
+        width: 52px;
+        height: 43px;
+    }
+
+    .school-name h2 {
+        font-size: 13px;
+    }
+
+    .school-name span {
+        font-size: 8px;
+    }
+
+
+    .contact-hero {
+        min-height: 330px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 35px;
+    }
+
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .enquiry-form h2 {
+        font-size: 30px;
+    }
+
+
+    .map-area {
+        min-height: 350px;
+    }
+
+    .map-placeholder {
+        padding: 25px 18px;
+    }
+
+    .map-placeholder h3 {
+        font-size: 21px;
+    }
+
+
+    .admission-cta h2 {
+        font-size: 29px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 18px 0;
+    }
+
+
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 15px;
+
+        font-size: 22px;
+    }
+
+}
+</style>
+
+<body>
+
+
+<!-- ==================================================
+     SOCIAL BAR
+================================================== -->
+
+<div class="social-bar">
+
+    <div class="social-container">
+
+        <div class="social-left">
+
+            <span>Follow Us</span>
+
+
+        <a href="https://www.facebook.com/profile.php?id=100043325314059" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/lakhirammemsrsecschool?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@lakhirammemsrsecschool?si=zoe5a7tN0A0ABR8w" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+        
+
+
+        <div class="social-right">
+
+            <a href="tel:+918950025448">
+                <i class="fas fa-phone"></i>
+                +91 89500 25448
+            </a>
+
+            <a href="mailto:lrmpss2003@gmail.com">
+                <i class="fas fa-envelope"></i>
+                lrmpss2003@gmail.com
+            </a>
+
+            <a href="https://wa.me/918950025448" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- LOGO AREA -->
+
+        <a href="index.html" class="logo-area">
+
+            <div class="logo-space">
+
+               
+                <img src="logo-removebg-preview.png" alt="School Logo">
+                
+
+            </div>
+
+
+            <div class="school-name">
+
+                <h2>
+                    Lakhi Ram Memorial
+                </h2>
+
+                <span>
+                    Public Sec. School
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav
+            class="nav-links"
+            id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="principal.html">
+                Principal
+            </a>
+
+            <a href="facility.html">
+                Facilities
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+            <a href="admison.html"
+               class="admission-btn">
+
+                Admission
+
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MARQUEE
+================================================== -->
+
+<div class="school-marquee">
+
+    <div class="marquee-content">
+
+        <span>A STATE TOPPER SCHOOL</span>
+
+        <span>QUALITY EDUCATION</span>
+
+        <span>DISCIPLINE &amp; VALUES</span>
+
+        <span>BRIGHT FUTURE</span>
+
+        <span>EXCELLENCE</span>
+
+        <span>A STATE TOPPER SCHOOL</span>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     CONTACT HERO
+================================================== -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+        <span>
+            GET IN TOUCH
+        </span>
+
+        <h1>
+
+            We'd Love To
+            <strong>Hear From You</strong>
+
+        </h1>
+
+        <p>
+
+            Have questions about admissions, school facilities
+            or anything else? Get in touch with Lakhi Ram
+            Memorial Public Sec. School.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CONTACT DETAILS
+================================================== -->
+
+<section class="contact-section">
+
+
+    <div class="section-heading">
+
+        <span>
+            CONTACT INFORMATION
+        </span>
+
+        <h2>
+            Connect With
+            <strong>Our School</strong>
+        </h2>
+
+        <p>
+
+            Reach us by phone, email or WhatsApp.
+            Our team will be happy to assist you.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-cards">
+
+
+        <!-- PHONE -->
+
+        <a href="tel:+918950025448"
+           class="contact-card">
+
+            <div class="contact-icon">
+
+                <i class="fas fa-phone"></i>
+
+            </div>
+
+            <span>
+                CALL US
+            </span>
+
+            <h3>
+                +91 89500 25448
+            </h3>
+
+            <p>
+                Click to call the school
+            </p>
+
+        </a>
+
+
+
+        <!-- EMAIL -->
+
+        <a href="mailto:lrmpss2003@gmail.com"
+           class="contact-card">
+
+            <div class="contact-icon">
+
+                <i class="fas fa-envelope"></i>
+
+            </div>
+
+            <span>
+                EMAIL US
+            </span>
+
+            <h3>
+                lrmpss2003@gmail.com
+            </h3>
+
+            <p>
+                Send us an email
+            </p>
+
+        </a>
+
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/918950025448"
+            target="_blank"
+            class="contact-card">
+
+            <div class="contact-icon">
+
+                <i class="fab fa-whatsapp"></i>
+
+            </div>
+
+            <span>
+                WHATSAPP
+            </span>
+
+            <h3>
+                Chat With Us
+            </h3>
+
+            <p>
+                Quick admission enquiry
+            </p>
+
+        </a>
+
+
+
+        <!-- LOCATION -->
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+
+                <i class="fas fa-location-dot"></i>
+
+            </div>
+
+            <span>
+                VISIT US
+            </span>
+
+            <h3>
+                Halalpur, Sonipat
+            </h3>
+
+            <p>
+                Haryana, India
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ENQUIRY + MAP SECTION
+================================================== -->
+
+<section class="enquiry-section">
+
+
+    <div class="enquiry-container">
+
+
+        <!-- FORM -->
+
+        <div class="enquiry-form">
+
+            <span class="form-label">
+                SCHOOL ENQUIRY
+            </span>
+
+            <h2>
+                Send Us A
+                <strong>Message</strong>
+            </h2>
+
+            <p>
+                Fill in your details and we'll help you
+                with your school-related enquiry.
+            </p>
+
+
+            <form id="contactForm">
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Enquiry For
+                        </label>
+
+                        <select id="enquiryType">
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option>
+                                Admission
+                            </option>
+
+                            <option>
+                                School Facilities
+                            </option>
+
+                            <option>
+                                Fees
+                            </option>
+
+                            <option>
+                                General Enquiry
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                        required></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="send-btn">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    Send Enquiry
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- MAP / LOCATION -->
+
+        <div class="map-area">
+
+            <div class="map-placeholder">
+
+                <i class="fas fa-location-dot"></i>
+
+                <h3>
+                    Lakhi Ram Memorial
+                </h3>
+
+                <p>
+                    Public Sec. School
+                </p>
+
+                <span>
+                    Halalpur, Sonipat, Haryana
+                </span>
+
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Halalpur%2C%20Sonipat%2C%20Haryana"
+                    target="_blank">
+
+                    Open In Google Maps
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     WHY CONTACT US
+================================================== -->
+
+<section class="help-section">
+
+    <div class="section-heading">
+
+        <span>
+            HOW CAN WE HELP?
+        </span>
+
+        <h2>
+            We're Here To
+            <strong>Help You</strong>
+        </h2>
+
+    </div>
+
+
+    <div class="help-grid">
+
+
+        <div class="help-card">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h3>
+                Admission
+            </h3>
+
+            <p>
+                Get information about admission process,
+                classes and required documents.
+            </p>
+
+        </div>
+
+
+        <div class="help-card">
+
+            <i class="fas fa-indian-rupee-sign"></i>
+
+            <h3>
+                Fee Information
+            </h3>
+
+            <p>
+                Contact the school for current fee structure
+                and related information.
+            </p>
+
+        </div>
+
+
+        <div class="help-card">
+
+            <i class="fas fa-school"></i>
+
+            <h3>
+                School Visit
+            </h3>
+
+            <p>
+                Connect with us to know more about
+                visiting the school campus.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ADMISSION CTA
+================================================== -->
+
+<section class="admission-cta">
+
+    <div>
+
+        <span>
+            ADMISSIONS OPEN
+        </span>
+
+        <h2>
+            Ready To Start Your
+            <strong>Journey With Us?</strong>
+        </h2>
+
+        <p>
+            Contact our school today for admission details,
+            fees and other information.
+        </p>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/918950025448?text=Namaste%20Lakhi%20Ram%20Memorial%20Public%20Sec.%20School%2C%20I%20want%20to%20know%20more%20about%20admission."
+        target="_blank"
+        class="admission-btn">
+
+        <i class="fab fa-whatsapp"></i>
+
+        Admission Enquiry
+
+    </a>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-box">
+
+            <div class="footer-logo">
+
+
+
+
+                <div>
+
+                    <h2>
+                        Lakhi Ram Memorial
+                    </h2>
+
+                    <span>
+                        Public Sec. School
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                Providing quality education with discipline,
+                values and opportunities for every student.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="principal.html">
+                Principal
+            </a>
+
+            <a href="facility.html">
+                Facilities
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-box">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Halalpur, Sonipat, Haryana
+            </p>
+
+            <a href="tel:+918950025448">
+                ☎ +91 89500 25448
+            </a>
+
+            <a href="mailto:lrmpss2003@gmail.com">
+                ✉ lrmpss2003@gmail.com
+            </a>
+
+            <a
+                href="https://wa.me/918950025448"
+                target="_blank">
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lakhi Ram Memorial Public Sec. School.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Made by <strong>Parteek Tushir</strong>
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==================================================
+     FLOATING WHATSAPP
+================================================== -->
+
+<a
+    href="https://wa.me/918950025448"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<script>
+    // =====================================================
+// LAKHI RAM MEMORIAL PUBLIC SEC. SCHOOL
+// CONTACT PAGE JAVASCRIPT
+// =====================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // =================================================
+    // MOBILE NAVBAR
+    // =================================================
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuBtn && navLinks) {
+
+        menuBtn.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            navLinks.classList.toggle("show");
+
+            const icon = menuBtn.querySelector("i");
+
+            if (navLinks.classList.contains("show")) {
+
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+
+        // Menu link click ke baad menu close
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("show");
+
+                const icon = menuBtn.querySelector("i");
+
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+
+            });
+
+        });
+
+
+        // Bahar click karne par menu close
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !navLinks.contains(event.target) &&
+                !menuBtn.contains(event.target)
+            ) {
+
+                navLinks.classList.remove("show");
+
+                const icon = menuBtn.querySelector("i");
+
+                if (icon) {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+
+            }
+
+        });
+
+    }
+
+
+    // =================================================
+    // WHATSAPP FUNCTION
+    // =================================================
+
+    window.openWhatsApp = function () {
+
+        const phone = "918950025448";
+
+        const message =
+            "Namaste Lakhi Ram Memorial Public Sec. School!%0A%0A" +
+            "Hello, I want to enquire about the school.%0A%0A" +
+            "नमस्ते, मैं स्कूल के बारे में जानकारी लेना चाहता/चाहती हूँ।%0A%0A" +
+            "Please share admission details, fees and required information.%0A" +
+            "कृपया admission details, fees और जरूरी जानकारी साझा करें।";
+
+        const whatsappURL =
+            "https://wa.me/" +
+            phone +
+            "?text=" +
+            message;
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    };
+
+
+    // =================================================
+    // CONTACT FORM
+    // =================================================
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            // Form values
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const phone =
+                document.getElementById("phone").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const enquiryType =
+                document.getElementById("enquiryType").value;
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            // Basic validation
+
+            if (!name) {
+
+                alert("Please enter your name.");
+
+                return;
+
+            }
+
+
+            if (!phone) {
+
+                alert("Please enter your phone number.");
+
+                return;
+
+            }
+
+
+            if (phone.length < 10) {
+
+                alert(
+                    "Please enter a valid phone number."
+                );
+
+                return;
+
+            }
+
+
+            if (!message) {
+
+                alert("Please write your message.");
+
+                return;
+
+            }
+
+
+            // WhatsApp message
+
+            const whatsappMessage =
+                `Namaste Lakhi Ram Memorial Public Sec. School!
+
+Student/Parent Name: ${name}
+Phone Number: ${phone}
+Email: ${email || "Not provided"}
+Enquiry For: ${enquiryType || "General Enquiry"}
+
+Message:
+${message}
+
+नमस्ते,
+मैं स्कूल के बारे में जानकारी चाहता/चाहती हूँ।`;
+
+
+            const whatsappURL =
+                "https://wa.me/918950025448?text=" +
+                encodeURIComponent(whatsappMessage);
+
+
+            // Open WhatsApp
+
+            window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+
+            // Form reset
+
+            contactForm.reset();
+
+        });
+
+    }
+
+
+    // =================================================
+    // NAVBAR SCROLL SHADOW
+    // =================================================
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    function updateNavbar() {
+
+        if (!navbar) return;
+
+
+        if (window.scrollY > 30) {
+
+            navbar.style.boxShadow =
+                "0 8px 25px rgba(0,45,100,0.20)";
+
+        } else {
+
+            navbar.style.boxShadow =
+                "0 5px 18px rgba(0,50,100,0.12)";
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateNavbar
+    );
+
+
+    updateNavbar();
+
+
+    // =================================================
+    // PHONE VALIDATION
+    // =================================================
+
+    const phoneInput =
+        document.getElementById("phone");
+
+
+    if (phoneInput) {
+
+        phoneInput.addEventListener(
+            "input",
+            function () {
+
+                // Sirf numbers allow
+
+                this.value =
+                    this.value.replace(/\D/g, "");
+
+                // Maximum 10 digits
+
+                if (this.value.length > 10) {
+
+                    this.value =
+                        this.value.substring(0, 10);
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =================================================
+    // EMAIL BASIC CHECK
+    // =================================================
+
+    const emailInput =
+        document.getElementById("email");
+
+
+    if (emailInput) {
+
+        emailInput.addEventListener(
+            "blur",
+            function () {
+
+                if (
+                    this.value &&
+                    !this.value.includes("@")
+                ) {
+
+                    this.setCustomValidity(
+                        "Please enter a valid email address."
+                    );
+
+                } else {
+
+                    this.setCustomValidity("");
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =================================================
+    // ESCAPE KEY
+    // =================================================
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                if (navLinks) {
+
+                    navLinks.classList.remove(
+                        "show"
+                    );
+
+                }
+
+                if (menuBtn) {
+
+                    const icon =
+                        menuBtn.querySelector("i");
+
+                    if (icon) {
+
+                        icon.classList.remove(
+                            "fa-xmark"
+                        );
+
+                        icon.classList.add(
+                            "fa-bars"
+                        );
+
+                    }
+
+                }
+
+            }
+
+        }
+    );
+
+
+    // =================================================
+    // SCROLL REVEAL ANIMATION
+    // =================================================
+
+    const animatedElements =
+        document.querySelectorAll(
+            ".contact-card, .help-card, .enquiry-form, .map-area"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    animatedElements.forEach(
+        function (element) {
+
+            element.style.opacity = "0";
+
+            element.style.transform =
+                "translateY(25px)";
+
+            element.style.transition =
+                "opacity .7s ease, transform .7s ease";
+
+            observer.observe(element);
+
+        }
+    );
+
+
+    // Animation class
+
+    const animationStyle =
+        document.createElement("style");
+
+    animationStyle.innerHTML = `
+
+        .contact-card.visible,
+        .help-card.visible,
+        .enquiry-form.visible,
+        .map-area.visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+    `;
+
+    document.head.appendChild(
+        animationStyle
+    );
+
+
+    // =================================================
+    // SOCIAL LINKS
+    // =================================================
+
+    const socialLinks =
+        document.querySelectorAll(
+            ".social-left a"
+        );
+
+
+    socialLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    const href =
+                        this.getAttribute("href");
+
+                    if (
+                        !href ||
+                        href === "#"
+                    ) {
+
+                        event.preventDefault();
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+    // =================================================
+    // CONSOLE
+    // =================================================
+
+    console.log(
+        "Lakhi Ram Memorial Public Sec. School Contact Page Loaded."
+    );
+
+});
+</script>
+
+</body>
+</html>
