@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Facilities | Lakhi Ram Memorial Public Sec. School</title>
+
+    <link rel="stylesheet" href="facilities.css">
+</head>
+<style>
+    /* ================= ROOT ================= */
+
+:root {
+    --blue: #0756b8;
+    --dark-blue: #063b7a;
+    --light-blue: #eef6ff;
+    --lighter-blue: #f7fbff;
+    --text: #102a43;
+    --gray: #687b8f;
+    --white: #ffffff;
+    --border: #dceafa;
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ================= SOCIAL BAR ================= */
+
+.social-bar {
+    background: var(--dark-blue);
+    color: white;
+    min-height: 42px;
+}
+
+.social-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.social-left,
+.social-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.social-left span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.social-left a,
+.social-right a {
+    font-size: 13px;
+    opacity: .95;
+    transition: .3s;
+}
+
+.social-left a:hover,
+.social-right a:hover {
+    opacity: .7;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: var(--blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 82px;
+
+    padding: 10px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    min-width: max-content;
+}
+
+.logo-space {
+    width: 75px;
+    height: 55px;
+
+    border: 1px dashed rgba(255,255,255,.8);
+    background: rgba(255,255,255,.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.logo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.school-name h2 {
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.school-name span {
+    display: block;
+    font-size: 12px;
+    margin-top: 2px;
+    opacity: .9;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: white;
+    padding: 10px 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255,255,255,.16);
+}
+
+.nav-links .admission-btn {
+    background: white;
+    color: var(--blue);
+    margin-left: 6px;
+}
+
+.nav-links .admission-btn:hover {
+    background: var(--light-blue);
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 40px;
+
+    border: 1px solid rgba(255,255,255,.5);
+    background: transparent;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    padding: 8px;
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    background: white;
+
+    margin: 4px 0;
+
+    border-radius: 5px;
+}
+
+
+/* ================= MARQUEE ================= */
+
+.school-marquee {
+    background: var(--light-blue);
+    overflow: hidden;
+
+    border-bottom: 1px solid #d8e9fb;
+}
+
+.marquee-content {
+    width: max-content;
+
+    display: flex;
+    gap: 55px;
+
+    padding: 11px 0;
+
+    animation: marquee 22s linear infinite;
+}
+
+.marquee-content span {
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    position: relative;
+}
+
+.marquee-content span::after {
+    content: "•";
+
+    margin-left: 55px;
+    color: #82b4e8;
+}
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ================= HERO ================= */
+
+.facilities-hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3f8ff,
+            #ffffff
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.small-title {
+    display: inline-block;
+
+    color: var(--blue);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 64px);
+
+    line-height: 1.08;
+
+    margin-bottom: 22px;
+}
+
+.hero-content h1 strong {
+    display: block;
+    color: var(--blue);
+}
+
+.hero-content p {
+    max-width: 700px;
+    margin: auto;
+
+    color: var(--gray);
+
+    font-size: 17px;
+}
+
+
+/* ================= FACILITIES SECTION ================= */
+
+.facilities-section {
+    padding: 90px 25px;
+    background: white;
+}
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: var(--blue);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    margin: 10px 0 15px;
+}
+
+.section-heading h2 strong {
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--gray);
+}
+
+
+/* GRID */
+
+.facilities-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* CARD */
+
+.facility-card {
+    position: relative;
+
+    padding: 32px 25px;
+
+    min-height: 290px;
+
+    background: var(--lighter-blue);
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s,
+        box-shadow .3s,
+        border-color .3s;
+}
+
+.facility-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #9fc8f1;
+
+    box-shadow:
+        0 18px 40px rgba(7,86,184,.12);
+}
+
+.facility-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: white;
+
+    font-size: 30px;
+
+    margin-bottom: 22px;
+
+    box-shadow: 0 7px 20px rgba(7,86,184,.08);
+}
+
+.facility-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.facility-card p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+.card-number {
+    position: absolute;
+
+    right: 18px;
+    bottom: 10px;
+
+    font-size: 45px;
+    font-weight: 900;
+
+    color: rgba(7,86,184,.07);
+}
+
+
+/* ================= HIGHLIGHT ================= */
+
+.facility-highlight {
+    background: var(--dark-blue);
+
+    color: white;
+
+    padding: 70px 25px;
+}
+
+.highlight-content {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.highlight-content > div {
+    max-width: 720px;
+}
+
+.highlight-content span,
+.admission-cta span {
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.highlight-content h2 {
+    font-size: clamp(30px, 4vw, 45px);
+
+    line-height: 1.15;
+
+    margin: 10px 0 15px;
+}
+
+.highlight-content h2 strong {
+    color: #9ecfff;
+}
+
+.highlight-content p {
+    color: rgba(255,255,255,.78);
+}
+
+.whatsapp-btn {
+    flex-shrink: 0;
+
+    padding: 14px 22px;
+
+    border-radius: 7px;
+
+    background: white;
+    color: var(--dark-blue);
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================= ADMISSION CTA ================= */
+
+.admission-cta {
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    background: var(--light-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+.admission-cta h2 {
+    font-size: 35px;
+
+    line-height: 1.15;
+
+    margin: 8px 0;
+}
+
+.admission-cta h2 strong {
+    color: var(--blue);
+}
+
+.admission-cta p {
+    color: var(--gray);
+}
+
+.admission-whatsapp {
+    flex-shrink: 0;
+
+    background: var(--blue);
+    color: white;
+
+    padding: 15px 23px;
+
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    transition: .3s;
+}
+
+.admission-whatsapp:hover {
+    background: var(--dark-blue);
+    transform: translateY(-3px);
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #062e60;
+    color: white;
+
+    padding-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 25px 45px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.2fr;
+
+    gap: 50px;
+}
+
+.footer-box h3 {
+    margin-bottom: 17px;
+}
+
+.footer-box p {
+    color: rgba(255,255,255,.7);
+    font-size: 14px;
+}
+
+.footer-box a {
+    display: block;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 14px;
+
+    margin: 8px 0;
+
+    transition: .3s;
+}
+
+.footer-box a:hover {
+    color: white;
+}
+
+
+/* FOOTER LOGO */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.footer-logo-space {
+    width: 65px;
+    height: 48px;
+
+    border: 1px dashed rgba(255,255,255,.6);
+
+    background: rgba(255,255,255,.08);
+}
+
+.footer-logo h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.footer-logo span {
+    font-size: 11px;
+    opacity: .75;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+}
+
+
+/* ================= FLOATING WHATSAPP ================= */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 2000;
+
+    padding: 12px 17px;
+
+    border-radius: 50px;
+
+    background: #1fa855;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+
+    transition: .3s;
+}
+
+.floating-whatsapp:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links a {
+        padding: 9px 8px;
+        font-size: 13px;
+    }
+
+    .facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .social-container {
+        padding: 8px 18px;
+    }
+
+    .social-left a {
+        display: none;
+    }
+
+    .nav-container {
+        min-height: 72px;
+        padding: 9px 18px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 100%;
+
+        background: var(--blue);
+
+        padding: 12px 18px 18px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        box-shadow: 0 15px 25px rgba(0,0,0,.15);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links .admission-btn {
+        margin-left: 0;
+    }
+
+    .highlight-content,
+    .admission-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .social-right a:first-child {
+        display: none;
+    }
+
+    .social-container {
+        justify-content: center;
+    }
+
+    .logo-space {
+        width: 58px;
+        height: 46px;
+    }
+
+    .school-name h2 {
+        font-size: 15px;
+    }
+
+    .school-name span {
+        font-size: 10px;
+    }
+
+    .facilities-hero {
+        min-height: 380px;
+        padding: 60px 20px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .facilities-section {
+        padding: 65px 18px;
+    }
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-card {
+        min-height: auto;
+    }
+
+    .facility-highlight {
+        padding: 55px 20px;
+    }
+
+    .admission-cta {
+        margin: 55px 18px;
+        padding: 35px 25px;
+    }
+
+    .admission-cta h2 {
+        font-size: 28px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .school-name h2 {
+        font-size: 13px;
+    }
+
+    .logo-space {
+        width: 52px;
+        height: 42px;
+    }
+
+    .floating-whatsapp {
+        right: 12px;
+        bottom: 12px;
+        font-size: 12px;
+    }
+
+}
+</style>
+<body>
+
+    <!-- ================= SOCIAL BAR ================= -->
+    <div class="social-bar">
+        <div class="social-container">
+
+           <div class="social-left">
+        <span>Follow Us</span><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <a href="https://www.facebook.com/profile.php?id=100043325314059" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/lakhirammemsrsecschool?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@lakhirammemsrsecschool?si=zoe5a7tN0A0ABR8w" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+            <div class="social-right">
+                <a href="tel:+918950025448">
+                    ☎ +91 89500 25448
+                </a>
+
+                <a href="https://wa.me/918950025448" target="_blank">
+                    WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo-area">
+
+                <div class="logo-space">
+                    
+                    <img src="logo-removebg-preview.png" alt="School Logo">
+                    
+                </div>
+
+                <div class="school-name">
+                    <h2>Lakhi Ram Memorial</h2>
+                    <span>Public Sec. School</span>
+                </div>
+
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- NAVIGATION -->
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html">Home</a>
+
+                <a href="gallery.html">Gallery</a>
+
+                <a href="principal.html">Principal</a>
+
+                <a href="facility.html" class="active">
+                    Facilities
+                </a>
+
+                <a href="result.html">Results</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="admison.html" class="admission-btn">
+                    Admission
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="school-marquee">
+
+        <div class="marquee-content">
+
+            <span>A STATE TOPPER SCHOOL</span>
+            <span>QUALITY EDUCATION</span>
+            <span>DISCIPLINE &amp; VALUES</span>
+            <span>BRIGHT FUTURE</span>
+            <span>A STATE TOPPER SCHOOL</span>
+            <span>QUALITY EDUCATION</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="facilities-hero">
+
+        <div class="hero-content">
+
+            <span class="small-title">
+                SCHOOL FACILITIES
+            </span>
+
+            <h1>
+                Everything Students Need
+                <strong>To Learn & Grow</strong>
+            </h1>
+
+            <p>
+                Lakhi Ram Memorial Public Sec. School provides
+                a safe, clean and supportive environment where
+                students can learn, explore their talents and
+                build a bright future.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FACILITIES ================= -->
+    <section class="facilities-section">
+
+        <div class="section-heading">
+
+            <span>OUR FACILITIES</span>
+
+            <h2>
+                Better Facilities,
+                <strong>Better Learning</strong>
+            </h2>
+
+            <p>
+                We believe that good education needs a good
+                environment. Our school provides modern and
+                student-friendly facilities.
+            </p>
+
+        </div>
+
+
+        <div class="facilities-grid">
+
+
+            <!-- PLAYGROUND -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    ⚽
+                </div>
+
+                <h3>Playground</h3>
+
+                <p>
+                    A spacious playground where students can
+                    participate in sports, physical activities
+                    and outdoor games.
+                </p>
+
+                <span class="card-number">01</span>
+
+            </div>
+
+
+            <!-- LIBRARY -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    📚
+                </div>
+
+                <h3>Library</h3>
+
+                <p>
+                    A peaceful library with useful books and
+                    study material that encourages students
+                    to develop regular reading habits.
+                </p>
+
+                <span class="card-number">02</span>
+
+            </div>
+
+
+            <!-- TRANSPORT -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    🚌
+                </div>
+
+                <h3>School Transport</h3>
+
+                <p>
+                    School transportation facilities help
+                    students travel conveniently between
+                    home and school.
+                </p>
+
+                <span class="card-number">03</span>
+
+            </div>
+
+
+            <!-- CLEAN ENVIRONMENT -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    🌿
+                </div>
+
+                <h3>Clean Environment</h3>
+
+                <p>
+                    A clean, green and hygienic campus provides
+                    students with a healthy and positive
+                    atmosphere for learning.
+                </p>
+
+                <span class="card-number">04</span>
+
+            </div>
+
+
+            <!-- SMART CLASSROOM -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    💻
+                </div>
+
+                <h3>Smart Classrooms</h3>
+
+                <p>
+                    Student-friendly classrooms designed to
+                    make teaching more interesting, interactive
+                    and effective.
+                </p>
+
+                <span class="card-number">05</span>
+
+            </div>
+
+
+            <!-- COMPUTER LAB -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    🖥️
+                </div>
+
+                <h3>Computer Education</h3>
+
+                <p>
+                    Students are encouraged to develop computer
+                    knowledge and digital skills for the modern
+                    world.
+                </p>
+
+                <span class="card-number">06</span>
+
+            </div>
+
+
+            <!-- SCIENCE LAB -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    🔬
+                </div>
+
+                <h3>Science Learning</h3>
+
+                <p>
+                    Practical learning activities help students
+                    understand scientific concepts in a simple
+                    and interesting way.
+                </p>
+
+                <span class="card-number">07</span>
+
+            </div>
+
+
+            <!-- SAFETY -->
+            <div class="facility-card">
+
+                <div class="facility-icon">
+                    🛡️
+                </div>
+
+                <h3>Safe Campus</h3>
+
+                <p>
+                    We focus on maintaining a disciplined,
+                    caring and secure atmosphere for students
+                    and staff.
+                </p>
+
+                <span class="card-number">08</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HIGHLIGHT ================= -->
+    <section class="facility-highlight">
+
+        <div class="highlight-content">
+
+            <div>
+                <span>OUR PROMISE</span>
+
+                <h2>
+                    A Place Where
+                    <strong>Students Feel at Home</strong>
+                </h2>
+
+                <p>
+                    From academics to sports, reading to
+                    technology, our facilities are designed
+                    to support the overall development of every
+                    student.
+                </p>
+            </div>
+
+            <a
+                href="https://wa.me/918950025448?text=Hello%20Lakhi%20Ram%20Memorial%20Public%20Sec.%20School%2C%20I%20want%20to%20know%20more%20about%20the%20school%20facilities."
+                target="_blank"
+                class="whatsapp-btn"
+            >
+                Ask About Facilities
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADMISSION CTA ================= -->
+    <section class="admission-cta">
+
+        <div>
+
+            <span>ADMISSIONS OPEN</span>
+
+            <h2>
+                Give Your Child
+                <strong>A Better Future</strong>
+            </h2>
+
+            <p>
+                Contact the school for admission information
+                and visit our campus.
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/918950025448?text=Hello%20Lakhi%20Ram%20Memorial%20Public%20Sec.%20School%2C%20I%20want%20to%20enquire%20about%20admission."
+            target="_blank"
+            class="admission-whatsapp"
+        >
+            Enquire on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-box">
+
+                <div class="footer-logo">
+
+                    
+
+                    <div>
+                        <h1>Lakhi Ram Memorial</h1>
+                        <span>Public Sec. School</span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Providing quality education with discipline,
+                    values and opportunities for every student.
+                </p>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="principal.html">Principal</a>
+                <a href="facility.html">Facilities</a>
+                <a href="result.html">Results</a>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>Contact</h3>
+
+                <p>📍 Halalpur, Sonipat</p>
+
+                <a href="tel:+918950025448">
+                    ☎ +91 89500 25448
+                </a>
+
+                <a
+                    href="https://wa.me/918950025448"
+                    target="_blank"
+                >
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lakhi Ram Memorial Public Sec. School.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Made by <strong>Parteek Tushir</strong>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- FLOATING WHATSAPP -->
+    <a
+        href="https://wa.me/918950025448"
+        target="_blank"
+        class="floating-whatsapp"
+        aria-label="WhatsApp"
+    >
+        WhatsApp
+    </a>
+
+
+    <script>
+        /* ================= MOBILE MENU ================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+if (menuBtn && navLinks) {
+
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+
+    /* Close menu after clicking any link */
+
+    const links = navLinks.querySelectorAll("a");
+
+    links.forEach(link => {
+
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+
+    });
+
+
+    /* Close menu when clicking outside */
+
+    document.addEventListener("click", (event) => {
+
+        if (
+            !navLinks.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+            navLinks.classList.remove("show");
+        }
+
+    });
+
+}
+
+
+/* ================= ESC KEY ================= */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+
+        if (navLinks) {
+            navLinks.classList.remove("show");
+        }
+
+    }
+
+});
+
+
+/* ================= CARD ANIMATION ================= */
+
+const cards = document.querySelectorAll(".facility-card");
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+    card.style.transform = "translateY(25px)";
+    card.style.transition =
+        "opacity .6s ease, transform .6s ease";
+
+    observer.observe(card);
+
+});
+    </script>
+
+</body>
+</html>

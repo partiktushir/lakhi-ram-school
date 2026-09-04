@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lakhi Ram Memorial Public Sec. School</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102a43;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+:root {
+    --blue: #0756b8;
+    --dark-blue: #063b7a;
+    --light-blue: #eef6ff;
+    --text: #102a43;
+    --gray: #687b8f;
+    --white: #ffffff;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.top-bar {
+    min-height: 38px;
+    background: #063b7a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    font-size: 13px;
+}
+
+.top-bar span,
+.top-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-right {
+    display: flex;
+    gap: 25px;
+}
+
+.top-bar i {
+    margin-right: 6px;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    height: 78px;
+
+    background: #0756b8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.nav-container {
+    width: 88%;
+    max-width: 1400px;
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO AREA */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    min-width: 300px;
+}
+
+
+/* LOGO SPACE */
+
+
+.logo-space {
+    width: 75px;
+    height: 55px;
+    background: rgba(255,255,255,0.12);
+    border: 1px dashed rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* SCHOOL NAME */
+
+.school-name h2 {
+    font-size: 19px;
+    line-height: 1.2;
+
+    color: white;
+}
+
+.school-name span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #dcecff;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* NAV MENU */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 11px 13px;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* ADMISSION */
+
+.nav-menu .admission-btn {
+    background: white;
+    color: #0756b8;
+
+    margin-left: 5px;
+}
+
+.nav-menu .admission-btn:hover {
+    background: #eef6ff;
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-btn {
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: white;
+    color: #0756b8;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+
+/* ================= MARQUEE ================= */
+
+.school-marquee {
+    width: 100%;
+
+    background: #eef6ff;
+
+    border-bottom: 1px solid #dcecff;
+
+    overflow: hidden;
+
+    padding: 12px 0;
+}
+
+.marquee-text {
+    width: max-content;
+
+    color: #0756b8;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    animation: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 620px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #063b7a;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-video {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+.video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 31, 65, 0.9),
+            rgba(3, 31, 65, 0.45),
+            rgba(3, 31, 65, 0.15)
+        );
+
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 88%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    color: white;
+}
+
+.hero-small {
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: #dcecff;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    max-width: 850px;
+
+    margin: 15px 0;
+}
+
+.hero h1 strong {
+    display: block;
+
+    color: #9ed0ff;
+}
+
+.hero p {
+    max-width: 600px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #e8f3ff;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 23px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: white;
+    color: #0756b8;
+}
+
+.secondary-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ADMISSION BADGE */
+
+.admission-badge {
+    position: absolute;
+
+    right: 6%;
+    bottom: 45px;
+
+    z-index: 3;
+
+    background: white;
+    color: #0756b8;
+
+    padding: 13px 20px;
+
+    border-radius: 50px;
+
+    font-weight: 800;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.admission-badge span {
+    width: 9px;
+    height: 9px;
+
+    display: inline-block;
+
+    background: #18a558;
+
+    border-radius: 50%;
+
+    margin-right: 8px;
+}
+
+
+/* ================= COMMON SECTION ================= */
+
+.section {
+    padding: 90px 6%;
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: #0756b8;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+
+    margin: 12px 0;
+
+    color: #102a43;
+}
+
+.section-heading h2 b {
+    color: #0756b8;
+}
+
+.section-heading p {
+    color: #687b8f;
+
+    line-height: 1.7;
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome {
+    background: white;
+}
+
+.welcome-cards {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.info-card {
+    padding: 35px 28px;
+
+    border: 1px solid #e2ebf3;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    background: white;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 40px rgba(0, 50, 100, 0.1);
+}
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #eef6ff;
+
+    color: #0756b8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: #687b8f;
+
+    line-height: 1.6;
+}
+
+
+/* ================= PRINCIPAL ================= */
+
+.principal-section {
+    background: #eef6ff;
+
+    padding: 90px 6%;
+}
+
+.principal-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.principal-image {
+    min-height: 400px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow: 0 15px 45px rgba(0, 50, 100, 0.1);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #0756b8;
+
+    background: linear-gradient(
+        145deg,
+        #eef6ff,
+        #ffffff
+    );
+
+    font-size: 18px;
+}
+
+.image-placeholder i {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+}
+
+.small-title {
+    color: #0756b8;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.principal-content h2 {
+    font-size: 42px;
+
+    margin: 15px 0 20px;
+
+    line-height: 1.2;
+}
+
+.principal-content h2 span {
+    color: #0756b8;
+}
+
+.principal-content p {
+    color: #687b8f;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.read-btn,
+.result-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    padding: 13px 20px;
+
+    background: #0756b8;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+}
+
+
+/* ================= FACILITIES ================= */
+
+.facilities {
+    background: white;
+}
+
+.facility-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.facility-card {
+    padding: 30px;
+
+    border: 1px solid #e2ebf3;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.facility-card:hover {
+    border-color: #9ccaff;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 70, 140, 0.08);
+}
+
+.facility-card i {
+    font-size: 28px;
+
+    color: #0756b8;
+
+    margin-bottom: 18px;
+}
+
+.facility-card h3 {
+    margin-bottom: 10px;
+}
+
+.facility-card p {
+    color: #687b8f;
+
+    line-height: 1.6;
+}
+
+
+/* ================= RESULTS ================= */
+
+.results {
+    padding: 90px 6%;
+
+    background: #0756b8;
+
+    color: white;
+}
+
+.results-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.result-text > span {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #dcecff;
+
+    font-weight: 800;
+}
+
+.result-text h2 {
+    font-size: 43px;
+
+    line-height: 1.2;
+
+    margin: 15px 0;
+}
+
+.result-text h2 strong {
+    color: #a9d5ff;
+}
+
+.result-text p {
+    line-height: 1.8;
+
+    color: #e4f1ff;
+}
+
+.result-btn {
+    background: white;
+
+    color: #0756b8;
+}
+
+.result-boxes {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.result-box {
+    padding: 28px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 10px;
+}
+
+.result-box i {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+    color: #dcecff;
+}
+
+.result-box h3 {
+    margin-bottom: 6px;
+}
+
+.result-box p {
+    color: #dcecff;
+}
+
+
+/* ================= ADMISSION ================= */
+
+.admission-section {
+    padding: 90px 6%;
+
+    background: #eef6ff;
+
+    text-align: center;
+}
+
+.admission-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.admission-content > span {
+    color: #0756b8;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+.admission-content h2 {
+    font-size: 43px;
+
+    margin: 15px 0;
+}
+
+.admission-content h2 strong {
+    color: #0756b8;
+}
+
+.admission-content p {
+    color: #687b8f;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.whatsapp-btn {
+    border: none;
+
+    background: #18a558;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: white;
+}
+
+.contact-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.contact-card {
+    text-align: center;
+
+    padding: 30px;
+
+    border: 1px solid #e2ebf3;
+
+    border-radius: 10px;
+}
+
+.contact-card i {
+    font-size: 28px;
+
+    color: #0756b8;
+
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #687b8f;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #063b7a;
+
+    color: white;
+
+    padding: 60px 6% 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+}
+
+.footer-school h2 {
+    font-size: 23px;
+}
+
+.footer-school p {
+    color: #dcecff;
+
+    margin-top: 5px;
+}
+
+.footer-description {
+    margin-top: 20px !important;
+}
+
+.footer-content h3 {
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #dcecff;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    color: #dcecff;
+
+    margin-bottom: 12px;
+}
+
+.footer-contact i {
+    width: 22px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #dcecff;
+
+    font-size: 13px;
+}
+
+
+/* ================= FLOATING WHATSAPP ================= */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 55px;
+    height: 55px;
+
+    background: #18a558;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    text-decoration: none;
+
+    z-index: 999;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+
+    animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(24,165,88,0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(24,165,88,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(24,165,88,0);
+    }
+
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1050px) {
+
+    .nav-menu {
+        gap: 0;
+    }
+
+    .nav-menu a {
+        padding: 10px 9px;
+
+        font-size: 13px;
+    }
+
+    .logo-area {
+        min-width: 250px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
+    .top-bar {
+        padding: 8px 5%;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+
+    .top-right {
+        gap: 15px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .logo-area {
+        min-width: 0;
+    }
+
+    .logo-space {
+        width: 45px;
+        height: 45px;
+    }
+
+    .school-name h2 {
+        font-size: 15px;
+    }
+
+    .school-name span {
+        font-size: 9px;
+    }
+
+    .menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .nav-menu {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #0756b8;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 10px 5% 15px;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+
+        padding: 13px;
+
+        text-align: left;
+    }
+
+    .nav-menu .admission-btn {
+        margin-left: 0;
+
+        margin-top: 5px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: 600px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .admission-badge {
+        right: 5%;
+        bottom: 25px;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+
+    .welcome-cards,
+    .facility-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* PRINCIPAL */
+
+    .principal-section {
+        padding: 65px 5%;
+    }
+
+    .principal-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .principal-image {
+        min-height: 330px;
+    }
+
+    .image-placeholder {
+        min-height: 330px;
+    }
+
+    .principal-content h2 {
+        font-size: 34px;
+    }
+
+
+    /* RESULTS */
+
+    .results {
+        padding: 65px 5%;
+    }
+
+    .results-container {
+        grid-template-columns: 1fr;
+    }
+
+    .result-text h2 {
+        font-size: 34px;
+    }
+
+
+    /* ADMISSION */
+
+    .admission-section {
+        padding: 65px 5%;
+    }
+
+    .admission-content h2 {
+        font-size: 34px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 50px 5% 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .top-bar {
+        font-size: 11px;
+    }
+
+    .top-right {
+        gap: 10px;
+    }
+
+    .logo-space {
+        width: 40px;
+        height: 40px;
+    }
+
+    .school-name h2 {
+        font-size: 13px;
+    }
+
+    .school-name span {
+        font-size: 8px;
+    }
+
+    .hero {
+        height: 560px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .admission-badge {
+        font-size: 12px;
+
+        padding: 10px 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .result-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+/* ===============================
+   SOCIAL TOP BAR
+================================ */
+
+.social-bar {
+    width: 100%;
+    min-height: 40px;
+
+    background: #063b7a;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    font-size: 13px;
+}
+
+
+/* LEFT SIDE */
+
+.social-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-left span {
+    margin-right: 5px;
+    color: #dcecff;
+    font-weight: 600;
+}
+
+.social-left a {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+.social-left a:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+}
+
+
+/* RIGHT SIDE */
+
+.social-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.social-right a {
+    color: #ffffff;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    transition: 0.3s ease;
+}
+
+.social-right a:hover {
+    color: #dcecff;
+}
+
+.social-right i {
+    font-size: 14px;
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .social-bar {
+        min-height: auto;
+
+        padding: 7px 5%;
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+
+    .social-left,
+    .social-right {
+        justify-content: center;
+    }
+
+    .social-left {
+        gap: 6px;
+    }
+
+    .social-right {
+        gap: 15px;
+    }
+
+    .social-bar {
+        font-size: 11px;
+    }
+
+    .social-left a {
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 400px) {
+
+    .social-right {
+        gap: 10px;
+    }
+
+    .social-right a {
+        font-size: 10px;
+    }
+
+    .social-left span {
+        font-size: 10px;
+    }
+
+}
+</style>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="social-bar">
+
+    <div class="social-left">
+        <span>Follow Us</span>
+
+        <a href="https://www.facebook.com/profile.php?id=100043325314059" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/lakhirammemsrsecschool?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@lakhirammemsrsecschool?si=zoe5a7tN0A0ABR8w" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+    <div class="social-right">
+
+        <a href="tel:+918950025448">
+            <i class="fas fa-phone"></i>
+            +91 89500 25448
+        </a>
+
+        <a href="https://wa.me/918950025448" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <!-- LOGO SPACE -->
+        <a href="index.html" class="logo-area">
+<div class="logo-space">
+    
+    <img src="logo-removebg-preview.png" alt="School Logo"> 
+</div>
+
+            <div class="school-name">
+                <h2>Lakhi Ram Memorial</h2>
+                <span>Public Sec. School</span>
+            </div>
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="principal.html">
+                Principal
+            </a>
+
+            <a href="facility.html">
+                Facilities
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="admison.html" class="admission-btn">
+                Admission
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= SCHOOL MARQUEE ================= -->
+
+<div class="school-marquee">
+
+    <div class="marquee-text">
+        A STATE TOPPER SCHOOL &nbsp; • &nbsp;
+        QUALITY EDUCATION &nbsp; • &nbsp;
+        BRIGHT FUTURE &nbsp; • &nbsp;
+        DISCIPLINE &nbsp; • &nbsp;
+        EXCELLENCE
+    </div>
+
+</div>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <!-- VIDEO -->
+
+    <video class="hero-video" autoplay muted loop playsinline>
+
+        <source src="videoall.mp4" type="video/mp4">
+        
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+            WELCOME TO
+        </span>
+
+        <h1>
+            Lakhi Ram Memorial
+            <strong>Public Sec. School</strong>
+        </h1>
+
+        <p>
+            Building strong foundations for a bright,
+            confident and successful future.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="admison.html" class="primary-btn">
+                <i class="fas fa-graduation-cap"></i>
+                Admission Now
+            </a>
+
+            <a href="gallery.html" class="secondary-btn">
+                <i class="fas fa-images"></i>
+                View Gallery
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADMISSION OPEN -->
+
+    <div class="admission-badge">
+        <span></span>
+        Admission Open
+    </div>
+
+</section>
+
+
+<!-- ================= WELCOME ================= -->
+
+<section class="welcome section">
+
+    <div class="section-heading">
+
+        <span>WELCOME TO OUR SCHOOL</span>
+
+        <h2>
+            Education That Builds
+            <b>Tomorrow</b>
+        </h2>
+
+        <p>
+            We believe that every child has the potential to achieve
+            great things. Our school provides a safe, disciplined and
+            inspiring environment where students can learn, grow and
+            become responsible citizens.
+        </p>
+
+    </div>
+
+
+    <div class="welcome-cards">
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+
+            <h3>Quality Education</h3>
+
+            <p>
+                Strong academic foundation with
+                modern learning methods.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+
+            <h3>Student Development</h3>
+
+            <p>
+                We focus on confidence, discipline,
+                skills and personality development.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="card-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+
+            <h3>Excellence</h3>
+
+            <p>
+                Encouraging every student to perform
+                their best in academics and activities.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRINCIPAL DESK ================= -->
+
+<section class="principal-section">
+
+    <div class="principal-container">
+
+        <div class="principal-image">
+
+            <div class="image-placeholder">
+
+               <img style="height: 100%;width: 100%;" src="WhatsApp Image 2026-09-02 at 8.33.08 AM.jpeg" alt="">
+                
+
+            </div>
+
+        </div>
+
+
+        <div class="principal-content">
+
+            <span class="small-title">
+                PRINCIPAL'S DESK
+            </span>
+
+            <h2>
+                Guiding Students Towards
+                <span>Success</span>
+            </h2>
+
+            <p>
+                Our aim is to provide every student with the right
+                education, guidance and opportunities to discover
+                their abilities and achieve their dreams.
+            </p>
+
+            <p>
+                Together, we are committed to creating a learning
+                environment based on knowledge, discipline,
+                confidence and good values.
+            </p>
+
+            <a href="principal.html" class="read-btn">
+                Read More
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FACILITIES ================= -->
+
+<section class="facilities section" id="facilities">
+
+    <div class="section-heading">
+
+        <span>OUR FACILITIES</span>
+
+        <h2>
+            Everything Students Need
+        </h2>
+
+        <p>
+            A comfortable and supportive environment for
+            learning and overall development.
+        </p>
+
+    </div>
+
+
+    <div class="facility-grid">
+
+        <div class="facility-card">
+            <i class="fas fa-school"></i>
+            <h3>Smart Classrooms</h3>
+            <p>Modern and comfortable classrooms for better learning.</p>
+        </div>
+
+
+        <div class="facility-card">
+            <i class="fas fa-flask"></i>
+            <h3>Science Labs</h3>
+            <p>Practical learning through experiments and activities.</p>
+        </div>
+
+
+        <div class="facility-card">
+            <i class="fas fa-book"></i>
+            <h3>Library</h3>
+            <p>A learning space with books and educational resources.</p>
+        </div>
+
+
+        <div class="facility-card">
+            <i class="fas fa-futbol"></i>
+            <h3>Sports</h3>
+            <p>Encouraging students to stay active and participate.</p>
+        </div>
+
+
+        <div class="facility-card">
+            <i class="fas fa-laptop"></i>
+            <h3>Computer Education</h3>
+            <p>Developing essential computer and digital skills.</p>
+        </div>
+
+
+        <div class="facility-card">
+            <i class="fas fa-shield-heart"></i>
+            <h3>Safe Environment</h3>
+            <p>A disciplined and caring environment for students.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESULTS ================= -->
+
+<section class="results" id="results">
+
+    <div class="results-container">
+
+        <div class="result-text">
+
+            <span>OUR ACHIEVEMENTS</span>
+
+            <h2>
+                Excellence In
+                <strong>Education</strong>
+            </h2>
+
+            <p>
+                Our students are continuously encouraged to work hard,
+                stay focused and achieve excellence in their studies.
+            </p>
+
+            <a href="gallery.html" class="result-btn">
+                View Achievements
+            </a>
+
+        </div>
+
+
+        <div class="result-boxes">
+
+            <div class="result-box">
+                <i class="fas fa-medal"></i>
+                <h3>Top Results</h3>
+                <p>Academic Excellence</p>
+            </div>
+
+            <div class="result-box">
+                <i class="fas fa-star"></i>
+                <h3>Bright Students</h3>
+                <p>Future Leaders</p>
+            </div>
+
+            <div class="result-box">
+                <i class="fas fa-award"></i>
+                <h3>Achievements</h3>
+                <p>Student Success</p>
+            </div>
+
+            <div class="result-box">
+                <i class="fas fa-chart-line"></i>
+                <h3>Growth</h3>
+                <p>Every Year</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ADMISSION ================= -->
+
+<section class="admission-section" id="admission">
+
+    <div class="admission-content">
+
+        <span>ADMISSIONS OPEN</span>
+
+        <h2>
+            Give Your Child A
+            <strong>Bright Future</strong>
+        </h2>
+
+        <p>
+            Contact us today for admission details,
+            fees and required documents.
+        </p>
+
+        <button onclick="openWhatsApp()" class="whatsapp-btn">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Enquire On WhatsApp
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact section" id="contact">
+
+    <div class="section-heading">
+
+        <span>GET IN TOUCH</span>
+
+        <h2>Contact Our School</h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fas fa-location-dot"></i>
+
+            <h3>School Address</h3>
+
+            <p>
+                Halalpur, Sonipat, Haryana
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <i class="fas fa-phone"></i>
+
+            <h3>Phone</h3>
+
+            <p>
+                +91 89500 25448
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <i class="fab fa-whatsapp"></i>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+                Admission Enquiry
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-school">
+
+            <h2>
+                Lakhi Ram Memorial
+            </h2>
+
+            <p>
+                Public Sec. School
+            </p>
+
+            <p class="footer-description">
+                Education • Discipline • Excellence
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="principal.html">Principal</a>
+            <a href="facility.html">Facilities</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +91 89500 25448
+            </p>
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Halalpur, Sonipat
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lakhi Ram Memorial Public Sec. School
+        </p>
+
+        <p>
+            Made by Parteek Tushir
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a href="https://wa.me/918950025448"
+   target="_blank"
+   class="floating-whatsapp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================
+       MOBILE NAVBAR
+    ========================= */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    if (menuBtn && navMenu) {
+
+        menuBtn.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+            navMenu.classList.toggle("active");
+
+            const icon = menuBtn.querySelector("i");
+
+            if (navMenu.classList.contains("active")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+            } else {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+
+        });
+
+
+        /* Close menu after clicking link */
+
+        const navLinks = navMenu.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("active");
+
+                const icon = menuBtn.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            });
+
+        });
+
+
+        /* Click outside */
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !navMenu.contains(event.target) &&
+                !menuBtn.contains(event.target)
+            ) {
+
+                navMenu.classList.remove("active");
+
+                const icon = menuBtn.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+    }
+
+
+    /* =========================
+       WHATSAPP ADMISSION
+    ========================= */
+
+    window.openWhatsApp = function () {
+
+        const phone = "918950025448";
+
+        const message =
+            "Namaste Lakhi Ram Memorial Public Sec. School!%0A%0A" +
+            "Hello, I want to enquire about admission.%0A" +
+            "नमस्ते, मैं स्कूल में admission के बारे में जानकारी लेना चाहता/चाहती हूँ।%0A%0A" +
+            "Please share admission details, fees and required documents.%0A" +
+            "कृपया admission details, fees और required documents की जानकारी दें।";
+
+        const whatsappURL =
+            "https://wa.me/" + phone + "?text=" + message;
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    };
+
+
+    /* =========================
+       SMOOTH SCROLL
+    ========================= */
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId = this.getAttribute("href");
+
+            if (!targetId || targetId === "#") {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /* =========================
+       SCROLL ANIMATION
+    ========================= */
+
+    const animatedElements = document.querySelectorAll(
+        ".info-card, .facility-card, .contact-card, .result-box"
+    );
+
+    const observer = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+    animatedElements.forEach(function (element) {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(25px)";
+        element.style.transition =
+            "opacity 0.7s ease, transform 0.7s ease";
+
+        observer.observe(element);
+
+    });
+
+
+    const animationStyle = document.createElement("style");
+
+    animationStyle.innerHTML = `
+        .info-card.show,
+        .facility-card.show,
+        .contact-card.show,
+        .result-box.show {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+
+    document.head.appendChild(animationStyle);
+
+
+    /* =========================
+       ESCAPE KEY
+    ========================= */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            if (navMenu) {
+
+                navMenu.classList.remove("active");
+
+            }
+
+        }
+
+    });
+
+});
+// ===============================
+// SOCIAL BAR JAVASCRIPT
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Social links
+    const socialLinks = document.querySelectorAll(".social-left a");
+
+    socialLinks.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const href = link.getAttribute("href");
+
+            // Agar link # hai to page ko upar jump nahi karne dena
+            if (href === "#") {
+                event.preventDefault();
+            }
+
+        });
+
+    });
+
+
+    // WhatsApp button
+    const whatsappLink = document.querySelector(
+        '.social-right a[href*="wa.me"]'
+    );
+
+    if (whatsappLink) {
+
+        whatsappLink.addEventListener("click", function () {
+
+            const phone = "918950025448";
+
+            const message =
+                "Namaste Lakhi Ram Memorial Public Sec. School!%0A%0A" +
+                "Hello, I want to enquire about the school.%0A" +
+                "नमस्ते, मैं स्कूल के बारे में जानकारी लेना चाहता/चाहती हूँ।";
+
+            this.href =
+                "https://wa.me/" +
+                phone +
+                "?text=" +
+                message;
+
+        });
+
+    }
+
+});
+</script>
+
+</body>
+</html>

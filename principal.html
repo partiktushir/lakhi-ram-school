@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Principal | Lakhi Ram Memorial Public Sec. School</title>
+
+    <link rel="stylesheet" href="principal.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102a43;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+:root {
+    --blue: #0756b8;
+    --dark-blue: #063b7a;
+    --light-blue: #eef6ff;
+    --text: #102a43;
+    --gray: #687b8f;
+}
+
+
+/* ==================================================
+   SOCIAL BAR
+================================================== */
+
+.social-bar {
+    width: 100%;
+    min-height: 40px;
+
+    background: #063b7a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    font-size: 13px;
+}
+
+.social-left,
+.social-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-left {
+    gap: 10px;
+}
+
+.social-left span {
+    color: #dcecff;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.social-left a {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    transition: .3s;
+}
+
+.social-left a:hover {
+    background: rgba(255,255,255,.18);
+}
+
+.social-right {
+    gap: 22px;
+}
+
+.social-right a {
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.social-right a:hover {
+    color: #dcecff;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+    width: 100%;
+    height: 78px;
+
+    background: #0756b8;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 18px rgba(0,0,0,.12);
+}
+
+.nav-container {
+    width: 88%;
+    max-width: 1400px;
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+
+    min-width: 300px;
+}
+
+
+/* RECTANGLE LOGO */
+
+.logo-space {
+    width: 75px;
+    height: 55px;
+
+    background: rgba(255,255,255,.12);
+
+    border: 1px dashed rgba(255,255,255,.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.logo-space img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* SCHOOL NAME */
+
+.school-name h2 {
+    color: white;
+    font-size: 19px;
+}
+
+.school-name span {
+    display: block;
+
+    color: #dcecff;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+    letter-spacing: 1px;
+}
+
+
+/* NAV */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 11px 13px;
+
+    border-radius: 6px;
+
+    transition: .3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background: rgba(255,255,255,.18);
+}
+
+.nav-menu .admission-btn {
+    background: white;
+    color: #0756b8;
+
+    margin-left: 5px;
+}
+
+
+/* MOBILE MENU */
+
+.menu-btn {
+    display: none;
+
+    width: 43px;
+    height: 43px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: white;
+    color: #0756b8;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   MARQUEE
+================================================== */
+
+.school-marquee {
+    width: 100%;
+
+    background: #eef6ff;
+
+    border-bottom: 1px solid #dcecff;
+
+    overflow: hidden;
+
+    padding: 12px 0;
+}
+
+.marquee-text {
+    width: max-content;
+
+    color: #0756b8;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    animation: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.principal-hero {
+    min-height: 390px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #063b7a,
+            #0756b8
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 6%;
+}
+
+.hero-content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.hero-content > span {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #dcecff;
+
+    font-weight: 800;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.1;
+
+    margin: 15px 0;
+}
+
+.hero-content h1 strong {
+    display: block;
+
+    color: #a9d5ff;
+}
+
+.hero-content p {
+    max-width: 700px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #e6f3ff;
+}
+
+
+/* ==================================================
+   LEADER SECTION
+================================================== */
+
+.leader-section {
+    padding: 95px 6%;
+
+    background: white;
+}
+
+.leader-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.leader-container.reverse {
+    grid-template-columns: .8fr 1.2fr;
+}
+
+
+/* PHOTO */
+
+.leader-photo {
+    width: 100%;
+
+    min-height: 450px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #eef6ff;
+
+    box-shadow:
+        0 15px 45px rgba(0,50,100,.10);
+}
+
+.leader-photo img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 450px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.photo-placeholder {
+    width: 100%;
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eef6ff,
+            #ffffff
+        );
+
+    color: #0756b8;
+}
+
+.photo-placeholder i {
+    font-size: 75px;
+
+    margin-bottom: 18px;
+}
+
+.photo-placeholder span {
+    font-weight: 700;
+
+    color: #687b8f;
+}
+
+
+/* CONTENT */
+
+.leader-label {
+    color: #0756b8;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+.leader-content h2 {
+    font-size: 46px;
+
+    margin: 12px 0 7px;
+
+    color: #102a43;
+}
+
+.leader-content h3 {
+    color: #0756b8;
+
+    font-size: 18px;
+
+    margin-bottom: 22px;
+}
+
+.leader-content p {
+    color: #687b8f;
+
+    line-height: 1.8;
+
+    margin-bottom: 14px;
+}
+
+
+/* POINTS */
+
+.leader-points {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.leader-points div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    background: #eef6ff;
+
+    border-radius: 6px;
+
+    color: #102a43;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.leader-points i {
+    color: #0756b8;
+}
+
+
+/* ==================================================
+   MESSAGE
+================================================== */
+
+.message-section {
+    padding: 85px 6%;
+
+    background: #eef6ff;
+}
+
+.message-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 55px 40px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 15px 40px rgba(0,50,100,.08);
+}
+
+.quote-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0756b8;
+
+    color: white;
+
+    font-size: 22px;
+}
+
+.message-box > span {
+    color: #0756b8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.message-box h2 {
+    font-size: 38px;
+
+    margin: 13px 0;
+}
+
+.message-box h2 strong {
+    color: #0756b8;
+}
+
+.message-box p {
+    color: #687b8f;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   RITU SECTION
+================================================== */
+
+.ritu-section {
+    background: white;
+}
+
+
+/* ==================================================
+   PHILOSOPHY
+================================================== */
+
+.philosophy-section {
+    padding: 90px 6%;
+
+    background: #eef6ff;
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading > span {
+    color: #0756b8;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    color: #102a43;
+
+    font-size: 40px;
+
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #687b8f;
+
+    line-height: 1.7;
+}
+
+.philosophy-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.philosophy-card {
+    padding: 30px 22px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    border: 1px solid #e2ebf3;
+
+    transition: .3s;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 12px 30px rgba(0,50,100,.09);
+}
+
+.philosophy-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: auto auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef6ff;
+
+    color: #0756b8;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+.philosophy-card h3 {
+    margin-bottom: 10px;
+}
+
+.philosophy-card p {
+    color: #687b8f;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   ADMISSION
+================================================== */
+
+.principal-admission {
+    padding: 90px 6%;
+
+    background: #0756b8;
+
+    color: white;
+
+    text-align: center;
+}
+
+.principal-admission > div {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.principal-admission span {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 800;
+
+    color: #dcecff;
+}
+
+.principal-admission h2 {
+    font-size: 43px;
+
+    margin: 15px 0;
+}
+
+.principal-admission h2 strong {
+    color: #a9d5ff;
+}
+
+.principal-admission p {
+    color: #e4f1ff;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.principal-admission button {
+    border: none;
+
+    background: white;
+
+    color: #0756b8;
+
+    padding: 15px 24px;
+
+    border-radius: 6px;
+
+    font-weight: 800;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.principal-admission button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    background: #063b7a;
+
+    color: white;
+
+    padding: 60px 6% 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+}
+
+.footer-school h2 {
+    font-size: 23px;
+}
+
+.footer-school p {
+    color: #dcecff;
+
+    margin-top: 5px;
+}
+
+.footer-description {
+    margin-top: 20px !important;
+}
+
+.footer-content h3 {
+    margin-bottom: 18px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #dcecff;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    color: #dcecff;
+
+    margin-bottom: 12px;
+}
+
+.footer-contact i {
+    width: 22px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #dcecff;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   WHATSAPP
+================================================== */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 55px;
+    height: 55px;
+
+    background: #18a558;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    text-decoration: none;
+
+    z-index: 999;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1050px) {
+
+    .nav-menu a {
+        padding: 10px 8px;
+
+        font-size: 13px;
+    }
+
+    .logo-area {
+        min-width: 250px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 850px) {
+
+    /* SOCIAL */
+
+    .social-bar {
+        flex-direction: column;
+
+        gap: 5px;
+
+        padding: 7px 5%;
+
+        text-align: center;
+    }
+
+    .social-right {
+        gap: 15px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 70px;
+    }
+
+    .nav-container {
+        width: 90%;
+    }
+
+    .logo-area {
+        min-width: 0;
+    }
+
+    .logo-space {
+        width: 60px;
+        height: 48px;
+    }
+
+    .school-name h2 {
+        font-size: 15px;
+    }
+
+    .school-name span {
+        font-size: 9px;
+    }
+
+    .menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #0756b8;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 10px 5% 15px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+
+        padding: 13px;
+
+        text-align: left;
+    }
+
+    .nav-menu .admission-btn {
+        margin-left: 0;
+
+        margin-top: 5px;
+    }
+
+
+    /* HERO */
+
+    .principal-hero {
+        min-height: 340px;
+
+        padding: 60px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+
+    /* LEADER */
+
+    .leader-section {
+        padding: 65px 5%;
+    }
+
+    .leader-container,
+    .leader-container.reverse {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .leader-photo {
+        min-height: 330px;
+    }
+
+    .photo-placeholder {
+        min-height: 330px;
+    }
+
+    .leader-photo img {
+        min-height: 330px;
+    }
+
+    .leader-content h2 {
+        font-size: 36px;
+    }
+
+
+    /* MESSAGE */
+
+    .message-section {
+        padding: 65px 5%;
+    }
+
+    .message-box {
+        padding: 40px 25px;
+    }
+
+    .message-box h2 {
+        font-size: 31px;
+    }
+
+
+    /* PHILOSOPHY */
+
+    .philosophy-section {
+        padding: 65px 5%;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ADMISSION */
+
+    .principal-admission {
+        padding: 65px 5%;
+    }
+
+    .principal-admission h2 {
+        font-size: 34px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 50px 5% 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+    .social-bar {
+        font-size: 11px;
+    }
+
+    .social-right {
+        gap: 10px;
+    }
+
+    .social-left a {
+        width: 25px;
+        height: 25px;
+    }
+
+    .logo-space {
+        width: 48px;
+        height: 42px;
+    }
+
+    .school-name h2 {
+        font-size: 13px;
+    }
+
+    .school-name span {
+        font-size: 8px;
+    }
+
+    .principal-hero {
+        min-height: 320px;
+    }
+
+    .hero-content h1 {
+        font-size: 33px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .leader-content h2 {
+        font-size: 32px;
+    }
+
+    .leader-points {
+        grid-template-columns: 1fr;
+    }
+
+    .message-box h2 {
+        font-size: 27px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+</style>
+<body>
+
+
+<!-- ==================================================
+     SOCIAL BAR
+================================================== -->
+
+<div class="social-bar">
+
+    <div class="social-left">
+
+        <span>Follow Us</span>
+
+         <a href="https://www.facebook.com/profile.php?id=100043325314059" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/lakhirammemsrsecschool?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@lakhirammemsrsecschool?si=zoe5a7tN0A0ABR8w" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+    </div>
+
+
+    <div class="social-right">
+
+        <a href="tel:+918950025448">
+            <i class="fas fa-phone"></i>
+            +91 89500 25448
+        </a>
+
+        <a href="https://wa.me/918950025448" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo-area">
+
+            <div class="logo-space">
+
+                
+                <img src="logo-removebg-preview.png" alt="School Logo">
+                
+
+            </div>
+
+
+            <div class="school-name">
+
+                <h2>Lakhi Ram Memorial</h2>
+
+                <span>Public Sec. School</span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button class="menu-btn" id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="principal.html" class="active">
+                Principal
+            </a>
+
+            <a href="facility.html">
+                Facilities
+            </a>
+
+            <a href="result.html">
+                Results
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="admison.html" class="admission-btn">
+                Admission
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==================================================
+     MARQUEE
+================================================== -->
+
+<div class="school-marquee">
+
+    <div class="marquee-text">
+
+        A STATE TOPPER SCHOOL
+        &nbsp; • &nbsp;
+        QUALITY EDUCATION
+        &nbsp; • &nbsp;
+        BRIGHT FUTURE
+        &nbsp; • &nbsp;
+        DISCIPLINE
+        &nbsp; • &nbsp;
+        EXCELLENCE
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     PRINCIPAL HERO
+================================================== -->
+
+<section class="principal-hero">
+
+    <div class="hero-content">
+
+        <span>OUR SCHOOL LEADERSHIP</span>
+
+        <h1>
+            Leadership That
+            <strong>Inspires Excellence</strong>
+        </h1>
+
+        <p>
+            Strong leadership, dedicated teachers and a positive
+            learning environment help every student move towards
+            a brighter future.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     SANJAY SIR
+================================================== -->
+
+<section class="leader-section">
+
+    <div class="leader-container">
+
+
+        <!-- PHOTO -->
+
+        <div class="leader-photo">
+
+            <div class="photo-placeholder">
+
+                  <img src="WhatsApp Image 2026-09-02 at 8.33.08 AM.jpeg" alt="Sanjay Sir">
+
+               
+            </div>
+
+          
+          
+            
+
+        </div>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="leader-content">
+
+            <span class="leader-label">
+                SCHOOL LEADERSHIP
+            </span>
+
+            <h2>
+                Sanjay Sir
+            </h2>
+
+            <h3>
+                School Leadership & Student Guidance
+            </h3>
+
+            <p>
+                Sanjay Sir plays an important role in guiding the
+                school towards academic growth, discipline and
+                overall student development.
+            </p>
+
+            <p>
+                His focus is on creating a positive educational
+                environment where students are encouraged to learn,
+                participate and develop confidence.
+            </p>
+
+
+            <div class="leader-points">
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>Student Development</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>Academic Guidance</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>Discipline & Values</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>School Development</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     SANJAY MESSAGE
+================================================== -->
+
+<section class="message-section">
+
+    <div class="message-box">
+
+        <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+        </div>
+
+        <span>MESSAGE FOR STUDENTS</span>
+
+        <h2>
+            Learn Today,
+            <strong>Lead Tomorrow</strong>
+        </h2>
+
+        <p>
+            Education is not only about marks. It is about
+            developing knowledge, confidence, discipline,
+            responsibility and the ability to face the future
+            with courage.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     RITU DHAIYA MA'AM
+================================================== -->
+
+<section class="leader-section ritu-section">
+
+    <div class="leader-container reverse">
+
+
+        <!-- PHOTO -->
+
+        <div class="leader-photo">
+
+            <div class="photo-placeholder">
+
+                 <img src="ritumam.jpeg"
+                 alt="Ritu Dhaiya Ma'am">
+
+             
+
+            </div>
+
+           
+           
+            
+
+        </div>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="leader-content">
+
+            <span class="leader-label">
+                TEACHING & GUIDANCE
+            </span>
+
+            <h2>
+                Ritu Dhaiya Ma'am
+            </h2>
+
+            <h3>
+                English Teacher
+            </h3>
+
+            <p>
+                Ritu Dhaiya Ma'am is an English teacher who focuses
+                on helping students improve their language,
+                communication and confidence.
+            </p>
+
+            <p>
+                She can also support students in other subjects
+                whenever required, helping them understand their
+                lessons and stay confident in their studies.
+            </p>
+
+
+            <div class="leader-points">
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>English Education</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>Communication Skills</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>Student Guidance</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    <span>All-Round Support</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     TEACHING PHILOSOPHY
+================================================== -->
+
+<section class="philosophy-section">
+
+    <div class="section-heading">
+
+        <span>OUR APPROACH</span>
+
+        <h2>
+            What We Believe
+        </h2>
+
+        <p>
+            Our school believes in developing students
+            academically, personally and socially.
+        </p>
+
+    </div>
+
+
+    <div class="philosophy-grid">
+
+
+        <div class="philosophy-card">
+
+            <div class="philosophy-icon">
+                <i class="fas fa-book-open"></i>
+            </div>
+
+            <h3>
+                Knowledge
+            </h3>
+
+            <p>
+                Building a strong foundation of knowledge
+                and understanding.
+            </p>
+
+        </div>
+
+
+
+        <div class="philosophy-card">
+
+            <div class="philosophy-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <h3>
+                Confidence
+            </h3>
+
+            <p>
+                Encouraging students to think, speak and
+                express themselves confidently.
+            </p>
+
+        </div>
+
+
+
+        <div class="philosophy-card">
+
+            <div class="philosophy-icon">
+                <i class="fas fa-scale-balanced"></i>
+            </div>
+
+            <h3>
+                Discipline
+            </h3>
+
+            <p>
+                Developing discipline, responsibility and
+                respect for others.
+            </p>
+
+        </div>
+
+
+
+        <div class="philosophy-card">
+
+            <div class="philosophy-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+
+            <h3>
+                Growth
+            </h3>
+
+            <p>
+                Helping every student discover their
+                strengths and potential.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ADMISSION CTA
+================================================== -->
+
+<section class="principal-admission">
+
+    <div>
+
+        <span>
+            ADMISSIONS OPEN
+        </span>
+
+        <h2>
+            Give Your Child A
+            <strong>Bright Future</strong>
+        </h2>
+
+        <p>
+            Contact Lakhi Ram Memorial Public Sec. School
+            for admission details, fees and required documents.
+        </p>
+
+        <button onclick="openWhatsApp()">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Enquire On WhatsApp
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-school">
+
+            <h2>
+                Lakhi Ram Memorial
+            </h2>
+
+            <p>
+                Public Sec. School
+            </p>
+
+            <p class="footer-description">
+                Education • Discipline • Excellence
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="principal.html">
+                Principal
+            </a>
+
+            <a href="facility.html">
+                Facilities
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                <i class="fas fa-phone"></i>
+                +91 89500 25448
+            </p>
+
+            <p>
+                <i class="fas fa-location-dot"></i>
+                Halalpur, Sonipat
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Lakhi Ram Memorial Public Sec. School
+        </p>
+
+        <p>
+            Made by Parteek Tushir
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a href="https://wa.me/918950025448"
+   target="_blank"
+   class="floating-whatsapp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* ==================================================
+       MOBILE NAVBAR
+    ================================================== */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+
+    if (menuBtn && navMenu) {
+
+        menuBtn.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+            navMenu.classList.toggle("active");
+
+            const icon = menuBtn.querySelector("i");
+
+            if (navMenu.classList.contains("active")) {
+
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+
+        /* CLOSE AFTER CLICK */
+
+        navMenu.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navMenu.classList.remove("active");
+
+                const icon = menuBtn.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            });
+
+        });
+
+
+        /* CLICK OUTSIDE */
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !navMenu.contains(event.target) &&
+                !menuBtn.contains(event.target)
+            ) {
+
+                navMenu.classList.remove("active");
+
+                const icon = menuBtn.querySelector("i");
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+    }
+
+
+
+    /* ==================================================
+       WHATSAPP
+    ================================================== */
+
+    window.openWhatsApp = function () {
+
+        const phone = "918950025448";
+
+        const message =
+            "Namaste Lakhi Ram Memorial Public Sec. School!%0A%0A" +
+            "Hello, I want to enquire about admission.%0A" +
+            "नमस्ते, मैं स्कूल में admission के बारे में जानकारी लेना चाहता/चाहती हूँ।%0A%0A" +
+            "Please share admission details, fees and required documents.%0A" +
+            "कृपया admission details, fees और required documents की जानकारी दें।";
+
+        const whatsappURL =
+            "https://wa.me/" +
+            phone +
+            "?text=" +
+            message;
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    };
+
+
+
+    /* ==================================================
+       SOCIAL LINKS
+    ================================================== */
+
+    document.querySelectorAll(".social-left a").forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            if (this.getAttribute("href") === "#") {
+                event.preventDefault();
+            }
+
+        });
+
+    });
+
+
+
+    /* ==================================================
+       ESC KEY
+    ================================================== */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            if (navMenu) {
+                navMenu.classList.remove("active");
+            }
+
+        }
+
+    });
+
+
+
+    /* ==================================================
+       LEADER CARD ANIMATION
+    ================================================== */
+
+    const elements = document.querySelectorAll(
+        ".leader-photo, .leader-content, .message-box, .philosophy-card"
+    );
+
+
+    const observer = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    elements.forEach(function (element) {
+
+        element.style.opacity = "0";
+
+        element.style.transform = "translateY(25px)";
+
+        element.style.transition =
+            "opacity .7s ease, transform .7s ease";
+
+        observer.observe(element);
+
+    });
+
+
+    const style = document.createElement("style");
+
+    style.innerHTML = `
+        .leader-photo.show,
+        .leader-content.show,
+        .message-box.show,
+        .philosophy-card.show {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    `;
+
+    document.head.appendChild(style);
+
+});
+</script>
+
+</body>
+</html>
