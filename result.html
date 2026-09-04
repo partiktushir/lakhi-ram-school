@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Results | Lakhi Ram Memorial Public Sec. School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="results.css">
+</head>
+<style>
+    :root {
+    --blue: #0756b8;
+    --dark-blue: #063b7a;
+    --light-blue: #eef6ff;
+    --lighter-blue: #f7fbff;
+    --text: #102a43;
+    --gray: #687b8f;
+    --white: #ffffff;
+    --border: #dceafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= SOCIAL BAR ================= */
+
+.social-bar {
+    background: var(--dark-blue);
+    color: white;
+    min-height: 42px;
+}
+
+.social-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+
+    min-height: 42px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-left,
+.social-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.social-left span,
+.social-left a,
+.social-right a {
+    font-size: 13px;
+}
+
+.social-left span {
+    font-weight: 700;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: var(--blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    min-height: 82px;
+
+    margin: auto;
+    padding: 10px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.logo-space {
+    width: 75px;
+    height: 55px;
+
+    background: rgba(255,255,255,.12);
+    border: 1px dashed rgba(255,255,255,.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.logo-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.school-name h2 {
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.school-name span {
+    display: block;
+    font-size: 12px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: white;
+    padding: 10px 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255,255,255,.16);
+}
+
+.nav-links .admission-btn {
+    background: white;
+    color: var(--blue);
+    margin-left: 6px;
+}
+
+
+/* MOBILE MENU */
+
+.menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 40px;
+
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 6px;
+
+    padding: 7px;
+}
+
+.menu-btn span {
+    display: block;
+
+    height: 3px;
+    background: white;
+
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+
+/* ================= MARQUEE ================= */
+
+.school-marquee {
+    background: var(--light-blue);
+    overflow: hidden;
+
+    border-bottom: 1px solid #d8e9fb;
+}
+
+.marquee-content {
+    width: max-content;
+
+    display: flex;
+    gap: 55px;
+
+    padding: 11px 0;
+
+    animation: marquee 22s linear infinite;
+}
+
+.marquee-content span {
+    color: var(--blue);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* ================= HERO ================= */
+
+.results-hero {
+    min-height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3f8ff,
+            #ffffff
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.small-title,
+.achievement-label,
+.section-heading > span,
+.result-message span,
+.admission-cta span {
+    color: var(--blue);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1.08;
+
+    margin: 12px 0 20px;
+}
+
+.hero-content h1 strong {
+    display: block;
+    color: var(--blue);
+}
+
+.hero-content p {
+    color: var(--gray);
+    font-size: 17px;
+}
+
+
+/* ================= SUHANI ================= */
+
+.suhani-section {
+    padding: 100px 25px;
+    background: white;
+}
+
+.suhani-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 70px;
+    align-items: center;
+}
+
+
+/* PHOTO */
+
+.suhani-photo {
+    width: 100%;
+}
+
+.photo-placeholder {
+    width: 100%;
+    min-height: 500px;
+
+    background: var(--light-blue);
+
+    border: 2px dashed #9fc8f1;
+    border-radius: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--blue);
+
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 500px;
+
+    object-fit: cover;
+}
+
+.photo-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.photo-placeholder span {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+/* CONTENT */
+
+.suhani-content h2 {
+    font-size: clamp(35px, 4vw, 52px);
+
+    line-height: 1.1;
+
+    margin: 10px 0;
+}
+
+.suhani-content h2 strong {
+    color: var(--blue);
+}
+
+.suhani-content h3 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+
+/* ACHIEVEMENT BOX */
+
+.achievement-box {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    background: var(--light-blue);
+
+    border-left: 5px solid var(--blue);
+
+    padding: 18px 22px;
+
+    margin: 25px 0;
+}
+
+.achievement-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--blue);
+    line-height: 1;
+}
+
+.achievement-number sup {
+    font-size: 20px;
+}
+
+.achievement-box strong {
+    font-size: 19px;
+}
+
+.achievement-box p {
+    color: var(--gray);
+    margin-top: 3px;
+}
+
+.achievement-text {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+
+/* NEET */
+
+.neet-highlight {
+    margin-top: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 20px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: white;
+
+    box-shadow: 0 10px 30px rgba(7,86,184,.08);
+}
+
+.neet-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--light-blue);
+
+    border-radius: 12px;
+
+    font-size: 27px;
+}
+
+.neet-highlight h4 {
+    color: var(--blue);
+    font-size: 20px;
+}
+
+.neet-highlight p {
+    color: var(--gray);
+}
+
+
+/* ================= ACHIEVEMENT CARDS ================= */
+
+.achievement-section {
+    background: var(--lighter-blue);
+    padding: 90px 25px;
+}
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin: 10px 0 15px;
+}
+
+.section-heading h2 strong {
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--gray);
+}
+
+.achievement-grid {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.achievement-card {
+    padding: 32px 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    transition: .3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 35px rgba(7,86,184,.1);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 17px;
+}
+
+.achievement-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.achievement-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* ================= MESSAGE ================= */
+
+.result-message {
+    padding: 80px 25px;
+
+    background: var(--dark-blue);
+    color: white;
+
+    text-align: center;
+}
+
+.result-message-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.result-message span {
+    color: #9ecfff;
+}
+
+.result-message h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+
+    margin: 12px 0 18px;
+}
+
+.result-message h2 strong {
+    color: #9ecfff;
+}
+
+.result-message p {
+    color: rgba(255,255,255,.75);
+}
+
+
+/* ================= CTA ================= */
+
+.admission-cta {
+    max-width: 1150px;
+
+    margin: 75px auto;
+
+    padding: 50px;
+
+    background: var(--light-blue);
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.admission-cta h2 {
+    font-size: 35px;
+    line-height: 1.15;
+
+    margin: 8px 0;
+}
+
+.admission-cta h2 strong {
+    color: var(--blue);
+}
+
+.admission-cta p {
+    color: var(--gray);
+}
+
+.admission-whatsapp {
+    background: var(--blue);
+    color: white;
+
+    padding: 15px 23px;
+
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #062e60;
+    color: white;
+
+    padding-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 0 25px 45px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr;
+
+    gap: 50px;
+}
+
+.footer-box h3 {
+    margin-bottom: 17px;
+}
+
+.footer-box p {
+    color: rgba(255,255,255,.7);
+    font-size: 14px;
+}
+
+.footer-box a {
+    display: block;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 14px;
+
+    margin: 8px 0;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.footer-logo-space {
+    width: 65px;
+    height: 48px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px dashed rgba(255,255,255,.6);
+}
+
+.footer-logo h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.footer-logo span {
+    font-size: 11px;
+    opacity: .75;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: rgba(255,255,255,.6);
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 2000;
+
+    padding: 12px 17px;
+
+    border-radius: 50px;
+
+    background: #1fa855;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links a {
+        padding: 9px 8px;
+        font-size: 13px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 100%;
+
+        background: var(--blue);
+
+        padding: 12px 18px 18px;
+
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links .admission-btn {
+        margin-left: 0;
+    }
+
+    .suhani-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .suhani-photo {
+        max-width: 550px;
+        margin: auto;
+    }
+
+    .admission-cta {
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin: 60px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .social-left a {
+        display: none;
+    }
+
+    .social-container {
+        justify-content: center;
+    }
+
+    .nav-container {
+        padding: 9px 18px;
+    }
+
+    .logo-space {
+        width: 58px;
+        height: 46px;
+    }
+
+    .school-name h2 {
+        font-size: 15px;
+    }
+
+    .school-name span {
+        font-size: 10px;
+    }
+
+    .results-hero {
+        min-height: 350px;
+    }
+
+    .suhani-section {
+        padding: 65px 18px;
+    }
+
+    .photo-placeholder,
+    .photo-placeholder img {
+        min-height: 400px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-section {
+        padding: 65px 18px;
+    }
+
+    .result-message {
+        padding: 60px 20px;
+    }
+
+    .admission-cta {
+        padding: 35px 25px;
+    }
+
+    .admission-cta h2 {
+        font-size: 28px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .school-name h2 {
+        font-size: 13px;
+    }
+
+    .logo-space {
+        width: 52px;
+        height: 42px;
+    }
+
+}
+</style>
+<body>
+
+    <!-- ================= SOCIAL BAR ================= -->
+
+    <div class="social-bar">
+        <div class="social-container">
+
+            <div class="social-left">
+                <span>Follow Us</span>
+
+                <div class="social-left">
+        <span>Follow Us</span>
+
+        <a href="https://www.facebook.com/profile.php?id=100043325314059" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/lakhirammemsrsecschool?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@lakhirammemsrsecschool?si=zoe5a7tN0A0ABR8w" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+            </div>
+
+            <div class="social-right">
+
+                <a href="tel:+918950025448">
+                    ☎ +91 89500 25448
+                </a>
+
+                <a href="https://wa.me/918950025448" target="_blank">
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo-area">
+
+                <div class="logo-space">
+                    
+                    <img src="logo-removebg-preview.png" alt="School Logo">
+                    
+                </div>
+
+                <div class="school-name">
+                    <h2>Lakhi Ram Memorial</h2>
+                    <span>Public Sec. School</span>
+                </div>
+
+            </a>
+
+
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html">Home</a>
+
+                <a href="gallery.html">Gallery</a>
+
+                <a href="principal.html">Principal</a>
+
+                <a href="facility.html">Facilities</a>
+
+                <a href="result.html" class="active">Results</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="admison.html" class="admission-btn">
+                    Admission
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MARQUEE ================= -->
+
+    <div class="school-marquee">
+
+        <div class="marquee-content">
+
+            <span>A STATE TOPPER SCHOOL</span>
+            <span>EXCELLENT RESULTS</span>
+            <span>QUALITY EDUCATION</span>
+            <span>BRIGHT FUTURE</span>
+            <span>ACADEMIC EXCELLENCE</span>
+            <span>A STATE TOPPER SCHOOL</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="results-hero">
+
+        <div class="hero-content">
+
+            <span class="small-title">
+                ACADEMIC ACHIEVEMENTS
+            </span>
+
+            <h1>
+                Our Students,
+                <strong>Our Pride</strong>
+            </h1>
+
+            <p>
+                The achievements of our students inspire us
+                to continue our journey towards excellence,
+                dedication and quality education.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SUHANI RESULT ================= -->
+
+    <section class="suhani-section">
+
+        <div class="suhani-container">
+
+
+            <!-- PHOTO -->
+
+            <div class="suhani-photo">
+
+                <div class="photo-placeholder">
+
+                    <!--
+                    Suhani ki photo yahan lagao:
+
+                    <img src="images/suhani.jpg"
+                         alt="Suhani">
+                    -->
+
+                    <div class="photo-icon">
+                        📷
+                    </div>
+
+                    <span>
+                        SUHANI'S PHOTO
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="suhani-content">
+
+                <span class="achievement-label">
+                    SPECIAL ACHIEVEMENT
+                </span>
+
+                <h2>
+                    Meet Our
+                    <strong>Star Performer</strong>
+                </h2>
+
+                <h3>
+                    Suhani
+                </h3>
+
+                <div class="achievement-box">
+
+                    <div class="achievement-number">
+                        3<sup>rd</sup>
+                    </div>
+
+                    <div>
+                        <strong>
+                            Position Holder
+                        </strong>
+
+                        <p>
+                            Haryana State
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <p class="achievement-text">
+
+                    Suhani has made the school proud by securing
+                    the <strong>3rd position in the state of
+                    Haryana</strong>.
+
+                    Her dedication, hard work and determination
+                    have made her an inspiration for other
+                    students.
+
+                </p>
+
+
+                <div class="neet-highlight">
+
+                    <div class="neet-icon">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            NEET Qualified
+                        </h4>
+
+                        <p>
+                            Cleared NEET in her
+                            <strong>first attempt</strong>.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENT CARDS ================= -->
+
+    <section class="achievement-section">
+
+        <div class="section-heading">
+
+            <span>OUR ACHIEVEMENTS</span>
+
+            <h2>
+                Excellence Beyond
+                <strong>Classrooms</strong>
+            </h2>
+
+            <p>
+                We celebrate academic excellence and encourage
+                every student to achieve their highest potential.
+            </p>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+
+            <div class="achievement-card">
+
+                <div class="card-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    State Level Excellence
+                </h3>
+
+                <p>
+                    Our students continue to bring pride to the
+                    school through outstanding academic
+                    achievements.
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="card-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Competitive Success
+                </h3>
+
+                <p>
+                    We motivate students to prepare confidently
+                    for competitive examinations and future
+                    opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="card-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Academic Excellence
+                </h3>
+
+                <p>
+                    Strong fundamentals, regular practice and
+                    dedicated teachers help students achieve
+                    better results.
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <div class="card-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Student Motivation
+                </h3>
+
+                <p>
+                    Every achievement motivates our students to
+                    dream bigger and work harder.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SCHOOL MESSAGE ================= -->
+
+    <section class="result-message">
+
+        <div class="result-message-content">
+
+            <span>
+                OUR VISION
+            </span>
+
+            <h2>
+                Every Student Has
+                <strong>The Potential To Shine</strong>
+            </h2>
+
+            <p>
+                We believe that the right guidance, discipline
+                and dedication can help every student achieve
+                their dreams. Our teachers continuously support
+                students in their academic journey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADMISSION CTA ================= -->
+
+    <section class="admission-cta">
+
+        <div>
+
+            <span>
+                ADMISSIONS OPEN
+            </span>
+
+            <h2>
+                Build Your Child's
+                <strong>Bright Future</strong>
+            </h2>
+
+            <p>
+                Join a school where academic excellence and
+                overall development go together.
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://wa.me/918950025448?text=Hello%20Lakhi%20Ram%20Memorial%20Public%20Sec.%20School%2C%20I%20want%20to%20know%20about%20admission."
+            target="_blank"
+            class="admission-whatsapp"
+        >
+            Enquire on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-box">
+
+                <div class="footer-logo">
+
+                    
+
+                    <div>
+                        <h1>
+                            Lakhi Ram Memorial
+                        </h1>
+
+                        <span>
+                            Public Sec. School
+                        </span>
+                    </div>
+
+                </div>
+
+                <p>
+                    Providing quality education with discipline,
+                    values and opportunities for every student.
+                </p>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="principal.html">Principal</a>
+                <a href="facility.html">Facilities</a>
+                <a href="result.html">Results</a>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📍 Halalpur, Sonipat
+                </p>
+
+                <a href="tel:+918950025448">
+                    ☎ +91 89500 25448
+                </a>
+
+                <a
+                    href="https://wa.me/918950025448"
+                    target="_blank"
+                >
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lakhi Ram Memorial Public Sec. School.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Made by <strong>Parteek Tushir</strong>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- FLOATING WHATSAPP -->
+
+    <a
+        href="https://wa.me/918950025448"
+        target="_blank"
+        class="floating-whatsapp"
+    >
+        WhatsApp
+    </a>
+
+
+    <script>
+        /* ================= MOBILE MENU ================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+if (menuBtn && navLinks) {
+
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+
+    const links = navLinks.querySelectorAll("a");
+
+    links.forEach(link => {
+
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+
+    });
+
+
+    document.addEventListener("click", (event) => {
+
+        if (
+            !navLinks.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+            navLinks.classList.remove("show");
+        }
+
+    });
+
+}
+
+
+/* ================= ESC KEY ================= */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+
+        navLinks?.classList.remove("show");
+
+    }
+
+});
+
+
+/* ================= SCROLL ANIMATION ================= */
+
+const animatedItems = document.querySelectorAll(
+    ".achievement-card, .suhani-content, .suhani-photo"
+);
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+
+animatedItems.forEach(item => {
+
+    item.style.opacity = "0";
+    item.style.transform = "translateY(25px)";
+    item.style.transition =
+        "opacity .7s ease, transform .7s ease";
+
+    observer.observe(item);
+
+});
+    </script>
+
+</body>
+</html>
